@@ -114,6 +114,48 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  The tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="to_code.html">
+   Ode to code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surviving_computers.html">
+   Surviving the computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_software.html">
+   Our tools
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using_jupyter.html">
+   Using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="more_on_jupyter.html">
+   More on the Jupyter notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brisk_python.html">
+   Brisk introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installing on your computer
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Images and code and images
  </span>
 </p>
@@ -124,13 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="brisk_python.html">
-   Brisk introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="list_comprehensions.html">
-   List comprehensions
+  <a class="reference internal" href="numpy_intro.html">
+   Introduction to Numpy
   </a>
  </li>
  <li class="toctree-l1">
@@ -139,18 +176,33 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="slicing_with_booleans.html">
-   Slicing with boolean vectors
+  <a class="reference internal" href="arrays_3d.html">
+   Three-dimensional arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="images_3d.html">
+   Three-dimensional images, NIfTI
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reshape_and_3d.html">
    Reshaping and three-dimensional arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing.html">
+   Indexing with Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing_nd.html">
+   Boolean indexing with more than one dimension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on boolean arrays
   </a>
  </li>
  <li class="toctree-l1">
@@ -192,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="arange.html">
-   Numpy arange
+   NumPy arange
   </a>
  </li>
  <li class="toctree-l1">
@@ -403,18 +455,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="coding_style.html">
    Python coding style
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Scripting analyses
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="full_scripting.html">
-   Scripting of SPM analysis with nipype
   </a>
  </li>
 </ul>
@@ -655,7 +695,7 @@ array) known as the <a class="reference external" href="https://en.wikipedia.org
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x11c58be80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7faee416bd30&gt;
 </pre></div>
 </div>
 <img alt="_images/convolution_background_9_1.png" src="_images/convolution_background_9_1.png" />
@@ -746,7 +786,10 @@ convolution.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/mb312/Library/Caches/nipraxis/0.2/ds114_sub009_t2r1_cond.txt&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;ds114_sub009_t2r1_cond.txt&#39; from &#39;https://raw.githubusercontent.com/nipraxis/nipraxis-data/0.3/ds114_sub009_t2r1_cond.txt&#39; to &#39;/home/runner/.cache/nipraxis/0.3&#39;.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/runner/.cache/nipraxis/0.3/ds114_sub009_t2r1_cond.txt&#39;
 </pre></div>
 </div>
 </div>
@@ -764,7 +807,7 @@ convert the onsets in the file, to neural time-courses.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11c9fc910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faee1bfcd90&gt;]
 </pre></div>
 </div>
 <img alt="_images/convolution_background_18_1.png" src="_images/convolution_background_18_1.png" />
@@ -811,7 +854,7 @@ drop the last <code class="docutils literal notranslate"><span class="pre">len(h
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11ca64790&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faee1beb460&gt;]
 </pre></div>
 </div>
 <img alt="_images/convolution_background_23_1.png" src="_images/convolution_background_23_1.png" />

@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Numpy arange" href="arange.html" />
+    <link rel="next" title="NumPy arange" href="arange.html" />
     <link rel="prev" title="Reshaping, 4D to 2D" href="reshape_and_4d.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -112,6 +112,48 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  The tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="to_code.html">
+   Ode to code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surviving_computers.html">
+   Surviving the computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_software.html">
+   Our tools
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using_jupyter.html">
+   Using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="more_on_jupyter.html">
+   More on the Jupyter notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brisk_python.html">
+   Brisk introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installing on your computer
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Images and code and images
  </span>
 </p>
@@ -122,13 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="brisk_python.html">
-   Brisk introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="list_comprehensions.html">
-   List comprehensions
+  <a class="reference internal" href="numpy_intro.html">
+   Introduction to Numpy
   </a>
  </li>
  <li class="toctree-l1">
@@ -137,18 +174,33 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="slicing_with_booleans.html">
-   Slicing with boolean vectors
+  <a class="reference internal" href="arrays_3d.html">
+   Three-dimensional arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="images_3d.html">
+   Three-dimensional images, NIfTI
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reshape_and_3d.html">
    Reshaping and three-dimensional arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing.html">
+   Indexing with Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing_nd.html">
+   Boolean indexing with more than one dimension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on boolean arrays
   </a>
  </li>
  <li class="toctree-l1">
@@ -190,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="arange.html">
-   Numpy arange
+   NumPy arange
   </a>
  </li>
  <li class="toctree-l1">
@@ -404,18 +456,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Scripting analyses
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="full_scripting.html">
-   Scripting of SPM analysis with nipype
-  </a>
- </li>
-</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -554,8 +594,9 @@ cannot represent every floating point number exactly. See:</p>
 avoid checking if the returned value is exactly equal to a desired value.
 Rather, we want to check whether the returned value is close enough, given the
 usual floating point error.  A common idiom in NumPy is to use the
-<code class="docutils literal notranslate"><span class="pre">np.allclose</span></code> function, which checks whether two values or two arrays are
-equal, within a small amount of error:</p>
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.allclose.html"><code class="docutils literal notranslate"><span class="pre">np.allclose</span></code></a>
+function, which checks whether two values or two arrays are equal, within a
+small amount of error:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -601,7 +642,9 @@ equal, within a small amount of error:</p>
 </div>
 </div>
 </div>
-<p>See the docstring for <code class="docutils literal notranslate"><span class="pre">np.allclose</span></code> for details of what “close” means.</p>
+<p>See the docstring for
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.allclose.html"><code class="docutils literal notranslate"><span class="pre">np.allclose</span></code></a>
+for details of what “close” means.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -639,7 +682,7 @@ equal, within a small amount of error:</p>
     <a class='right-next' id="next-link" href="arange.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Numpy arange</p>
+        <p class="prev-next-title">NumPy arange</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

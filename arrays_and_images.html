@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Slicing with boolean vectors" href="slicing_with_booleans.html" />
-    <link rel="prev" title="List comprehensions" href="list_comprehensions.html" />
+    <link rel="next" title="Three-dimensional arrays" href="arrays_3d.html" />
+    <link rel="prev" title="Introduction to Numpy" href="numpy_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,6 +112,48 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  The tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="to_code.html">
+   Ode to code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surviving_computers.html">
+   Surviving the computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_software.html">
+   Our tools
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using_jupyter.html">
+   Using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="more_on_jupyter.html">
+   More on the Jupyter notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brisk_python.html">
+   Brisk introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installing on your computer
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Images and code and images
  </span>
 </p>
@@ -122,13 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="brisk_python.html">
-   Brisk introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="list_comprehensions.html">
-   List comprehensions
+  <a class="reference internal" href="numpy_intro.html">
+   Introduction to Numpy
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -137,18 +174,33 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="slicing_with_booleans.html">
-   Slicing with boolean vectors
+  <a class="reference internal" href="arrays_3d.html">
+   Three-dimensional arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="images_3d.html">
+   Three-dimensional images, NIfTI
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reshape_and_3d.html">
    Reshaping and three-dimensional arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing.html">
+   Indexing with Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing_nd.html">
+   Boolean indexing with more than one dimension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on boolean arrays
   </a>
  </li>
  <li class="toctree-l1">
@@ -190,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="arange.html">
-   Numpy arange
+   NumPy arange
   </a>
  </li>
  <li class="toctree-l1">
@@ -404,18 +456,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Scripting analyses
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="full_scripting.html">
-   Scripting of SPM analysis with nipype
-  </a>
- </li>
-</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -544,10 +584,12 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="arrays-as-images-images-as-arrays">
 <h1>Arrays as images, images as arrays<a class="headerlink" href="#arrays-as-images-images-as-arrays" title="Permalink to this headline">¶</a></h1>
 <p>You can consider arrays as images, and images as arrays.</p>
-<p>We start off with our usual imports:</p>
+<p>We start off with the imports that we need.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The standard library for working with arrays.</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># Standard library for plotting.</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
@@ -591,29 +633,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x10f71c250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7faeb237cca0&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_5_1.png" src="_images/arrays_and_images_5_1.png" />
-</div>
-</div>
-<p>If you have a version of matplotlib older than version 2.0, this image will
-look rather blurry. This is because matplotlib is drawing an image with many
-more pixels than the array has values. For the pixels in-between array values,
-older matplotlib has a default of using <a class="reference external" href="http://en.wikipedia.org/wiki/Linear_interpolation">linear interpolation</a> to estimate a
-good pixel value. We can turn off this blurring effect by using <a class="reference external" href="https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation">nearest
-neighbor interpolation</a> instead of linear interpolation:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">an_array</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x10f806100&gt;
-</pre></div>
-</div>
-<img alt="_images/arrays_and_images_7_1.png" src="_images/arrays_and_images_7_1.png" />
 </div>
 </div>
 <p>The image is weirdly colorful. That is because matplotlib is using the default
@@ -624,17 +647,16 @@ yellow.</p>
 to show the colormap:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nearest interpolation is now the default</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">an_array</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">an_array</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x10f8a4f40&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7faeb022a2b0&gt;
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_9_1.png" src="_images/arrays_and_images_9_1.png" />
+<img alt="_images/arrays_and_images_7_1.png" src="_images/arrays_and_images_7_1.png" />
 </div>
 </div>
 <p>In our case, our image would make more sense as grayscale, so we use the
@@ -647,10 +669,10 @@ to show the colormap:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x10f97c730&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7faeb0177e50&gt;
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_11_1.png" src="_images/arrays_and_images_11_1.png" />
+<img alt="_images/arrays_and_images_9_1.png" src="_images/arrays_and_images_9_1.png" />
 </div>
 </div>
 <p>A grayscale image is an array containing numbers giving the pixel intensity
@@ -664,25 +686,103 @@ values - in our case between 0 and 99.</p>
 </div>
 </div>
 </div>
-<p>We can also plot lines in matplotlib. For example, we might want to plot the
-values in row 8 from this array.  Because Python indices start at 0, this is
-the 9th row of the array.</p>
+<p>This setting means that, by default, Matplotlib will use the <code class="docutils literal notranslate"><span class="pre">gray</span></code> colormap for the <em>rest of this session</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">an_array</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The default colormap is now gray.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">an_array</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10fa0b580&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7faeb00b5ca0&gt;
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_15_1.png" src="_images/arrays_and_images_15_1.png" />
+<img alt="_images/arrays_and_images_13_1.png" src="_images/arrays_and_images_13_1.png" />
 </div>
 </div>
-<p>The x axis is the position in the array (0 through 7) and the y axis is the
-value of the array row at that position.</p>
-<p>The plot shows us the 0 values at the edges of the bar of the “i”, an the ramp
+<p>Matplotlib does not save this change, so we would have to rerun this command
+for each session we want to change the default.  There are ways of making
+<a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/customizing.html">Matplotlib remember default
+changes</a>,
+but we won’t go into those here.</p>
+<p>We can also plot <em>lines</em> in matplotlib. For example, here are the values from
+the row at position 8 in this array. Because Python indices start at 0, this is
+the 9th row of the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Row position 8, all the columns.</span>
+<span class="n">an_array</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0,  0, 27, 99, 99, 77,  0,  0])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Actually, we can omit the second <code class="docutils literal notranslate"><span class="pre">:</span></code>, Numpy will assume we mean all the columns, if we just specify the row:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Also, row position 8, all the columns.</span>
+<span class="n">an_array</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0,  0, 27, 99, 99, 77,  0,  0])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We might want to plot the values in row 8.  To do this, we use the <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> function.  The first argument to this function is the <code class="docutils literal notranslate"><span class="pre">x</span></code> values for the plot, and the second argument is the <code class="docutils literal notranslate"><span class="pre">y</span></code> values.  We will use the column positions as for the <code class="docutils literal notranslate"><span class="pre">x</span></code> values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">col_positions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3, 4, 5, 6, 7])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specifying x and y values.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">col_positions</span><span class="p">,</span> <span class="n">an_array</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faeb0044fa0&gt;]
+</pre></div>
+</div>
+<img alt="_images/arrays_and_images_20_1.png" src="_images/arrays_and_images_20_1.png" />
+</div>
+</div>
+<p>The x axis is the column position in the array (0 through 7) and the y axis is
+the value of the array row at that position.</p>
+<p>In fact, we can even omit the <code class="docutils literal notranslate"><span class="pre">x</span></code> values in this case, and Matplotlib will assume we mean the x values to be <code class="docutils literal notranslate"><span class="pre">np.arange(8)</span></code>, where 8 is the length of the <code class="docutils literal notranslate"><span class="pre">y</span></code> values array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just specifying the y values, we get the x values default.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">an_array</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faeaffac8b0&gt;]
+</pre></div>
+</div>
+<img alt="_images/arrays_and_images_22_1.png" src="_images/arrays_and_images_22_1.png" />
+</div>
+</div>
+<p>The plot shows us the 0 values at the edges of the bar of the “i”, and the ramp
 up to the peak at the middle of the bar of the “i”, in columns number 3 and 4.</p>
 <p>A transpose in numpy uses the <code class="docutils literal notranslate"><span class="pre">.T</span></code> method on the array. This has the effect
 of flipping the rows and columns (in 2D):</p>
@@ -707,24 +807,51 @@ of flipping the rows and columns (in 2D):</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Defaults of nearest interpolation and gray colormap</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Defaults to gray colormap</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">an_array</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x10fa70fd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7faeaff18220&gt;
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_18_1.png" src="_images/arrays_and_images_18_1.png" />
+<img alt="_images/arrays_and_images_25_1.png" src="_images/arrays_and_images_25_1.png" />
 </div>
 </div>
 <p>We can also reshape the original array to a 1D array, by stacking all the rows
-end to end:</p>
+end to end.</p>
+<p>Here’s the original array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">old_shape</span> <span class="o">=</span> <span class="n">an_array</span><span class="o">.</span><span class="n">shape</span>
-<span class="n">a_1d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">an_array</span><span class="p">,</span> <span class="n">old_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">old_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">an_array</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0,  0,  0,  0,  0,  0,  0,  0],
+       [ 0,  0,  0,  9, 99, 99, 94,  0],
+       [ 0,  0,  0, 25, 99, 99, 79,  0],
+       [ 0,  0,  0,  0,  0,  0,  0,  0],
+       [ 0,  0,  0, 56, 99, 99, 49,  0],
+       [ 0,  0,  0, 73, 99, 99, 31,  0],
+       [ 0,  0,  0, 91, 99, 99, 13,  0],
+       [ 0,  0,  9, 99, 99, 94,  0,  0],
+       [ 0,  0, 27, 99, 99, 77,  0,  0],
+       [ 0,  0, 45, 99, 99, 59,  0,  0],
+       [ 0,  0, 63, 99, 99, 42,  0,  0],
+       [ 0,  0, 80, 99, 99, 24,  0,  0],
+       [ 0,  1, 96, 99, 99,  6,  0,  0],
+       [ 0, 16, 99, 99, 88,  0,  0,  0],
+       [ 0,  0,  0,  0,  0,  0,  0,  0]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the array, reshaped to 1D</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_1d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">an_array</span><span class="p">,</span> <span class="mi">15</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
 <span class="n">a_1d_array</span>
 </pre></div>
 </div>
@@ -755,7 +882,7 @@ end to end:</p>
 </div>
 </div>
 <p>Reshaping the array to one dimension is a common operation, so there is a
-separate numpy command for that, <code class="docutils literal notranslate"><span class="pre">np.ravel</span></code>:</p>
+separate Numpy command for that, <code class="docutils literal notranslate"><span class="pre">np.ravel</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">an_array</span><span class="p">)</span>
@@ -789,7 +916,7 @@ distribution of values in the array:</p>
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_25_1.png" src="_images/arrays_and_images_25_1.png" />
+<img alt="_images/arrays_and_images_34_1.png" src="_images/arrays_and_images_34_1.png" />
 </div>
 </div>
 <p>By default, the <code class="docutils literal notranslate"><span class="pre">plt.hist</span></code> function uses 50 bins, but you can specify how
@@ -819,7 +946,7 @@ many bins you want with the <code class="docutils literal notranslate"><span cla
  &lt;BarContainer object of 75 artists&gt;)
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_27_1.png" src="_images/arrays_and_images_27_1.png" />
+<img alt="_images/arrays_and_images_36_1.png" src="_images/arrays_and_images_36_1.png" />
 </div>
 </div>
 <p>As you can imagine, it’s not hard to go back to the 2D shape, by splitting the
@@ -833,10 +960,10 @@ many bins you want with the <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x10fc58730&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7faeafd72c10&gt;
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_29_1.png" src="_images/arrays_and_images_29_1.png" />
+<img alt="_images/arrays_and_images_38_1.png" src="_images/arrays_and_images_38_1.png" />
 </div>
 </div>
 <p>In numpy, basic operations like multiplication, addition, comparison, are
@@ -904,10 +1031,10 @@ binarizing the image at a threshold (of 50 in this case):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x10fccd580&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7faeafcea730&gt;
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_35_1.png" src="_images/arrays_and_images_35_1.png" />
+<img alt="_images/arrays_and_images_44_1.png" src="_images/arrays_and_images_44_1.png" />
 </div>
 </div>
 <p>We can slice arrays as we slice strings or lists. The difference for arrays is
@@ -922,10 +1049,10 @@ that we want to the top 4 rows, and the last 5 columns:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x10fd38760&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7faeafc53d90&gt;
 </pre></div>
 </div>
-<img alt="_images/arrays_and_images_37_1.png" src="_images/arrays_and_images_37_1.png" />
+<img alt="_images/arrays_and_images_46_1.png" src="_images/arrays_and_images_46_1.png" />
 </div>
 </div>
 </div>
@@ -955,17 +1082,17 @@ that we want to the top 4 rows, and the last 5 columns:</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="list_comprehensions.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="numpy_intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">List comprehensions</p>
+            <p class="prev-next-title">Introduction to Numpy</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="slicing_with_booleans.html" title="next page">
+    <a class='right-next' id="next-link" href="arrays_3d.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Slicing with boolean vectors</p>
+        <p class="prev-next-title">Three-dimensional arrays</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

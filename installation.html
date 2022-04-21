@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installing on your computer &#8212; Practice and theory of brain imaging</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="What is an image?" href="what_is_an_image.html" />
+    <link rel="prev" title="Brisk introduction to Python" href="brisk_python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/reggie.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Practice and theory of brain imaging</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Practice and theory of brain imaging
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The neuroimaging problem
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_problem.html">
+   The problem and the plan
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The tools
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="to_code.html">
+   Ode to code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surviving_computers.html">
+   Surviving the computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_software.html">
+   Our tools
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using_jupyter.html">
+   Using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="more_on_jupyter.html">
+   More on the Jupyter notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brisk_python.html">
+   Brisk introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Installing on your computer
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Images and code and images
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="what_is_an_image.html">
+   What is an image?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_intro.html">
+   Introduction to Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays_and_images.html">
+   Arrays as images, images as arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays_3d.html">
+   Three-dimensional arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images_3d.html">
+   Three-dimensional images, NIfTI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reshape_and_3d.html">
+   Reshaping and three-dimensional arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing.html">
+   Indexing with Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing_nd.html">
+   Boolean indexing with more than one dimension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="otsu_threshold.html">
+   Otsu’s method for binarizing images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_random.html">
+   Random numbers with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     np.random
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Arrays and plots
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="methods_vs_functions.html">
+   Methods vs functions in NumPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reshape_and_4d.html">
+   Reshaping, 4D to 2D
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="allclose.html">
+   Testing for near equality with “allclose”
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arange.html">
+   NumPy arange
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dot_outer.html">
+   Vector and matrix dot products, “np.outer”
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newaxis.html">
+   Adding length 1 dimensions with newaxis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subtract_means.html">
+   Subtracting the mean from columns or rows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plot_lines.html">
+   Plotting lines in matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subplots.html">
+   Subplots and axes in matplotlib
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Into the fourth dimension
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_to_4d.html">
+   Working with four dimensional images, masks and functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="voxels_by_time.html">
+   Reshaping 4D images to 2D arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="voxel_time_courses.html">
+   Voxel time courses
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Coordinate systems and spatial transforms
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="diagonal_zooms.html">
+   Encoding zooms (scaling) with a diagonal matrix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nibabel_affines.html">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nibabel.affines
+    </span>
+   </code>
+   module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nibabel_apply_affine.html">
+   Applying coordinate transforms with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nibabel.affines.apply_affine
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="map_coordinates.html">
+   General resampling between images with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     scipy.ndimage.map_coordinates
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="image_header_and_affine.html">
+   The image header and affine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images_and_affines.html">
+   Images and affines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rotation_2d_3d.html">
+   Rotations and rotation matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="resampling_with_ndimage.html">
+   Resampling with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     scipy.ndimage
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dipy_registration.html">
+   Registration with dipy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="anterior_cingulate.html">
+   Anterior cingulate
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Statistics and the general linear model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_test_example.html">
+   A worked example of the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hypothesis_tests.html">
+   Hypothesis testing with the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution_background.html">
+   Convolving with the hemodyamic response function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="model_one_voxel.html">
+   Modeling a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="test_one_voxel.html">
+   Testing a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi_multiply.html">
+   Estimation for many voxels at the same time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_tr_onsets.html">
+   Using onsets that do not start on a TR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="whole_image_statistics.html">
+   Whole-brain t tests and p values
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Code organization and collaboration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_modules.html">
+   Modules and scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_manipulation.html">
+   Making and breaking file paths in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sys_path.html">
+   Where does Python look for modules?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assert.html">
+   Using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     assert
+    </span>
+   </code>
+   for testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Python coding style
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/installation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/nipraxis/textbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/nipraxis/textbook/issues/new?title=Issue%20on%20page%20%2Finstallation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Installing on your computer</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="installing-on-your-computer">
+<h1>Installing on your computer<a class="headerlink" href="#installing-on-your-computer" title="Permalink to this headline">¶</a></h1>
+<p>We are going to be using the following major software for the class:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://python.org">Python</a></p></li>
+<li><p><a class="reference external" href="https://numpy.org">numpy</a> (the Python array package);</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org">matplotlib</a> (Python plotting package);</p></li>
+<li><p><a class="reference external" href="https://scipy.org">scipy</a> (Python scientific library);</p></li>
+<li><p><a class="reference external" href="https://nipy.org/nibabel">nibabel</a> (read / write of neuroimaging file
+formats in Python);</p></li>
+</ul>
+<p>For the class and homework we will use:</p>
+<ul class="simple">
+<li><p>a text editor of your choice - see <a class="reference internal" href="choosing_editor.html"><span class="doc">Choosing an editor</span></a>.  Choosing an
+editor is an important and personal decision, and one we recommend you invest
+some time in.</p></li>
+<li><p>the <a class="reference external" href="https://git-scm.com/">git</a> version control system.</p></li>
+</ul>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is common to run into problems with installation - don’t worry, we’re
+expecting that.  One of the things we are teaching in this class is how to
+solve problems like installing and using scientific software.  So, if you run
+into trouble - great - that will be a good opportunity for us to work together
+on a not-trivial problem.</p>
+</div>
+<p>Here are the instructions for installing Git and Python:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="installation_on_mac.html"><span class="doc">Installation on Mac</span></a>;</p></li>
+<li><p><a class="reference internal" href="installation_on_linux.html"><span class="doc">Installation on Linux</span></a>;</p></li>
+<li><p><a class="reference internal" href="installation_on_windows.html"><span class="doc">Installation on Windows</span></a>.</p></li>
+</ul>
+<p>Next, open Terminal (Mac) or Powershell (Windows) or a terminal of your choice
+on Linux.</p>
+<p>We suggest you start the steps below in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> directory in your home
+(user) directory.  To make sure you are working in that directory, run this
+command in the terminal.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME/Documents
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you get <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">system</span> <span class="pre">cannot</span> <span class="pre">find</span> <span class="pre">the</span> <span class="pre">path</span> <span class="pre">specified</span></code>, and you are on Windows,
+make sure you are running a <strong>Powershell</strong> shell, not the much older Windows <code class="docutils literal notranslate"><span class="pre">cmd</span></code> shell.</p>
+</div>
+<p>Make a new directory to store your work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">nipraxis</span><span class="o">-</span><span class="n">work</span>
+</pre></div>
+</div>
+<p>Change your shell to that directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">nipraxis</span><span class="o">-</span><span class="n">work</span>
+</pre></div>
+</div>
+<p>Confirm you are in the right directory with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+<p>This Prints the Working Directory (pwd).  You should see something like the following:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="88ed9ab2-1674-4eb2-9f7b-f746a44d82a8" name="4f6dccd1-b89e-440d-ae83-ed9876101a2b" type="radio">
+</input><label class="tabbed-label" for="88ed9ab2-1674-4eb2-9f7b-f746a44d82a8">
+Windows Powershell</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Path</span>
+<span class="o">----</span>
+<span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">your</span><span class="o">-</span><span class="n">user</span>\<span class="n">Documents</span>\<span class="n">nipraxis</span><span class="o">-</span><span class="n">working</span>
+</pre></div>
+</div>
+</div>
+<input id="2a6a92a4-bc16-43f7-9f87-b2a4b2b6988a" name="4f6dccd1-b89e-440d-ae83-ed9876101a2b" type="radio">
+</input><label class="tabbed-label" for="2a6a92a4-bc16-43f7-9f87-b2a4b2b6988a">
+Mac</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">user</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">nipraxis</span><span class="o">-</span><span class="n">working</span>
+</pre></div>
+</div>
+</div>
+<input id="52adcd10-dacc-4008-8498-e7985b2ef037" name="4f6dccd1-b89e-440d-ae83-ed9876101a2b" type="radio">
+</input><label class="tabbed-label" for="52adcd10-dacc-4008-8498-e7985b2ef037">
+Linux</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">user</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">nipraxis</span><span class="o">-</span><span class="n">working</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, in the terminal, check you have Python installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>This should show you the Python 3 version report, something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">3.10.4</span>
+</pre></div>
+</div>
+<p>Check you have the Python package manager installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>This should show you something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="mf">22.0.4</span> <span class="kn">from</span> <span class="o">&lt;</span><span class="n">some</span><span class="o">-</span><span class="n">directory</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span> <span class="p">(</span><span class="n">python</span> <span class="mf">3.10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now finish the install with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">scipy</span> <span class="n">matplotlib</span> <span class="n">pandas</span> <span class="n">scikit</span><span class="o">-</span><span class="n">image</span> <span class="n">nibabel</span> <span class="n">jupyter</span> <span class="n">ipython</span> <span class="n">jupytext</span> <span class="n">nipraxis</span> <span class="n">okpy</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don’t worry about warnings like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="p">:</span> <span class="n">The</span> <span class="n">script</span> <span class="o">&lt;</span><span class="n">some</span><span class="o">-</span><span class="n">program</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">installed</span> <span class="ow">in</span> <span class="s1">&#39;C:\Users\scipy\AppData\Roaming\Python\Python310\Scripts&#39;</span> <span class="n">which</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">on</span> <span class="n">PATH</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>Keep the terminal open.</p>
+<p>Check your install by downloading <a class="reference download internal" download="" href="_downloads/e88b942b5a72a94c7f29024f97020f7e/check_install.py"><code class="xref download docutils literal notranslate"><span class="pre">check_install.py</span></code></a> to your
+computer.   Note where the file went.  For example, you might have downloaded the file to your <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> directory.</p>
+<p>Move the file to your <code class="docutils literal notranslate"><span class="pre">Documents/nipraxis-work</span></code> directory.  You can use the terminal for this.  For example, if the file did appear in your default <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mv $HOME/Downloads/check_install.py .
+</pre></div>
+</div>
+<p>Check you do have the file in the <code class="docutils literal notranslate"><span class="pre">nipraxis-work</span></code> directory with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">check_install</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>from your terminal.  You should see something like:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="dc6db78a-746f-403f-8f80-5b8097870db9" name="716d38bb-0105-4bac-a5e9-f07612fd2a6d" type="radio">
+</input><label class="tabbed-label" for="dc6db78a-746f-403f-8f80-5b8097870db9">
+Windows Powershell</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">your</span><span class="o">-</span><span class="n">user</span>\<span class="n">Documents</span>\<span class="n">nipraxis</span><span class="o">-</span><span class="n">work</span>
+
+
+<span class="n">Mode</span>                 <span class="n">LastWriteTime</span>         <span class="n">Length</span> <span class="n">Name</span>
+<span class="o">----</span>                 <span class="o">-------------</span>         <span class="o">------</span> <span class="o">----</span>
+<span class="o">-</span><span class="n">a</span><span class="o">----</span>          <span class="mi">4</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="mi">2022</span>   <span class="mi">5</span><span class="p">:</span><span class="mi">04</span> <span class="n">AM</span>           <span class="mi">1937</span> <span class="n">check_install</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+<input id="60d01176-38f4-4052-9c9d-10853221bcf2" name="716d38bb-0105-4bac-a5e9-f07612fd2a6d" type="radio">
+</input><label class="tabbed-label" for="60d01176-38f4-4052-9c9d-10853221bcf2">
+Mac or Linux</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">check_install</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now check your installation has succeeded with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">check_install</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>You should see something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Platform</span><span class="p">:</span> <span class="n">macOS</span><span class="o">-</span><span class="mf">12.3.1</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">i386</span><span class="o">-</span><span class="mi">64</span><span class="n">bit</span>
+<span class="n">Python</span> <span class="n">version</span><span class="p">:</span> <span class="mf">3.8.13</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Mar</span> <span class="mi">16</span> <span class="mi">2022</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">07</span><span class="p">)</span> 
+<span class="p">[</span><span class="n">Clang</span> <span class="mf">13.0.0</span> <span class="p">(</span><span class="n">clang</span><span class="o">-</span><span class="mf">1300.0.29.30</span><span class="p">)]</span>
+
+<span class="n">Congratulations</span><span class="p">,</span> <span class="nb">all</span> <span class="n">checks</span> <span class="n">passed</span>
+</pre></div>
+</div>
+<p>where the details in the first three lines will depend on your system.</p>
+<p>Finally, to get a copy of the textbook files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nipraxis</span><span class="o">/</span><span class="n">textbook</span>
+</pre></div>
+</div>
+<p>Now you can open the textbook notebooks with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">textbook</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+<p>This will open your web browser in the Jupyter interface.  Select the file you
+are interested in.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "nipraxis/textbook",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="brisk_python.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Brisk introduction to Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="what_is_an_image.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What is an image?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The nipraxis team<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

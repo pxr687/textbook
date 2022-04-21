@@ -112,6 +112,48 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  The tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="to_code.html">
+   Ode to code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surviving_computers.html">
+   Surviving the computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_software.html">
+   Our tools
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using_jupyter.html">
+   Using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="more_on_jupyter.html">
+   More on the Jupyter notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brisk_python.html">
+   Brisk introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installing on your computer
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Images and code and images
  </span>
 </p>
@@ -122,13 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="brisk_python.html">
-   Brisk introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="list_comprehensions.html">
-   List comprehensions
+  <a class="reference internal" href="numpy_intro.html">
+   Introduction to Numpy
   </a>
  </li>
  <li class="toctree-l1">
@@ -137,18 +174,33 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="slicing_with_booleans.html">
-   Slicing with boolean vectors
+  <a class="reference internal" href="arrays_3d.html">
+   Three-dimensional arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="images_3d.html">
+   Three-dimensional images, NIfTI
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reshape_and_3d.html">
    Reshaping and three-dimensional arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing.html">
+   Indexing with Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing_nd.html">
+   Boolean indexing with more than one dimension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on boolean arrays
   </a>
  </li>
  <li class="toctree-l1">
@@ -190,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="arange.html">
-   Numpy arange
+   NumPy arange
   </a>
  </li>
  <li class="toctree-l1">
@@ -404,18 +456,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Scripting analyses
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="full_scripting.html">
-   Scripting of SPM analysis with nipype
-  </a>
- </li>
-</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -623,7 +663,7 @@ example, to return a single random number from the default normal distribution
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.324518392157267
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.21003142418872014
 </pre></div>
 </div>
 </div>
@@ -637,7 +677,7 @@ example, to return a single random number from the default normal distribution
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16.327489482746326
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.015967476549523
 </pre></div>
 </div>
 </div>
@@ -650,14 +690,14 @@ example, to return a single random number from the default normal distribution
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[14.2233, 15.8757, 15.895 , 15.336 , 16.0834],
-       [12.6119, 13.9987, 14.4789, 12.9978, 16.9277],
-       [15.0998, 16.3089, 14.041 , 13.7391, 11.78  ],
-       [15.5858, 14.2648, 13.2666, 17.0821, 15.6852],
-       [17.7148, 16.2382, 15.2652, 13.4574, 15.8262],
-       [16.4932, 13.87  , 17.2563, 12.7973, 11.8712],
-       [13.3986, 11.6815, 10.8881, 13.9186, 14.7164],
-       [15.6986, 13.4061, 14.56  , 12.5748, 13.8318]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[15.014 , 15.6082, 17.8558, 15.1455, 14.85  ],
+       [14.7482, 15.9561, 16.4558, 15.7846, 12.3785],
+       [12.4775, 15.6767, 14.3709, 15.4224, 15.3482],
+       [13.1717, 14.254 , 14.1896, 16.1446, 20.6851],
+       [16.5557, 11.8138, 17.2183, 16.5213, 15.4369],
+       [11.5379, 14.766 , 10.9594, 13.7482, 15.0856],
+       [15.062 , 14.14  , 15.5601, 11.1645, 15.407 ],
+       [14.7469, 12.7233, 16.4361, 15.6005, 13.9629]])
 </pre></div>
 </div>
 </div>
@@ -671,14 +711,14 @@ mean 1 and variance 1:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.0038, -1.0574, -2.3505, -0.5899, -0.1098],
-       [ 1.4441,  1.4905,  0.9436,  0.6928,  0.7483],
-       [ 0.5146, -0.5308, -0.1007,  0.9034, -1.205 ],
-       [ 1.0476, -1.541 ,  0.4267,  0.5609,  0.2855],
-       [ 1.1821, -1.4511, -0.965 , -0.1102,  1.4891],
-       [-0.4043, -1.2643, -1.1265,  0.4489, -0.9002],
-       [-0.0155, -0.6802, -0.1865,  1.2595,  1.9246],
-       [-1.9507, -1.4836, -0.8105, -0.3514, -0.9226]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.0345,  0.6701,  0.7659, -0.5458, -1.7361],
+       [-0.2725,  1.6945, -0.9924, -0.7114,  0.206 ],
+       [ 0.3181, -0.2286,  0.1194,  0.2198, -1.3119],
+       [-0.0523, -1.4138,  0.1798,  1.7438,  0.434 ],
+       [-0.9371, -0.5123, -0.1229, -0.642 ,  0.1904],
+       [ 0.6212,  0.1453, -0.9648,  0.1442,  0.3666],
+       [-0.3084, -0.0766,  0.5343, -0.7464, -0.0838],
+       [ 1.9176, -0.2496, -0.413 ,  0.7595,  0.6258]])
 </pre></div>
 </div>
 </div>

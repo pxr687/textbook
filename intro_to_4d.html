@@ -112,6 +112,48 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  The tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="to_code.html">
+   Ode to code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surviving_computers.html">
+   Surviving the computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_software.html">
+   Our tools
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using_jupyter.html">
+   Using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="more_on_jupyter.html">
+   More on the Jupyter notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brisk_python.html">
+   Brisk introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installing on your computer
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Images and code and images
  </span>
 </p>
@@ -122,13 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="brisk_python.html">
-   Brisk introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="list_comprehensions.html">
-   List comprehensions
+  <a class="reference internal" href="numpy_intro.html">
+   Introduction to Numpy
   </a>
  </li>
  <li class="toctree-l1">
@@ -137,18 +174,33 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="slicing_with_booleans.html">
-   Slicing with boolean vectors
+  <a class="reference internal" href="arrays_3d.html">
+   Three-dimensional arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="images_3d.html">
+   Three-dimensional images, NIfTI
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reshape_and_3d.html">
    Reshaping and three-dimensional arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing.html">
+   Indexing with Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean_indexing_nd.html">
+   Boolean indexing with more than one dimension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on boolean arrays
   </a>
  </li>
  <li class="toctree-l1">
@@ -190,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="arange.html">
-   Numpy arange
+   NumPy arange
   </a>
  </li>
  <li class="toctree-l1">
@@ -404,18 +456,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Scripting analyses
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="full_scripting.html">
-   Scripting of SPM analysis with nipype
-  </a>
- </li>
-</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -529,18 +569,18 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-text-files">
-   Reading text files
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#loading-data-with-nibabel">
    Loading data with Nibabel
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-memory">
+   Saving memory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#four-dimensional-arrays-space-time">
-   Four dimensional arrays - space + time
+   Four dimensional arrays: space + time
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -579,18 +619,18 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-text-files">
-   Reading text files
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#loading-data-with-nibabel">
    Loading data with Nibabel
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-memory">
+   Saving memory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#four-dimensional-arrays-space-time">
-   Four dimensional arrays - space + time
+   Four dimensional arrays: space + time
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -628,83 +668,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="reading-text-files">
-<h2>Reading text files<a class="headerlink" href="#reading-text-files" title="Permalink to this headline">¶</a></h2>
-<p>We’ve been reading values from text files in the exercises.</p>
-<p>Here is some revision on how to do that, going from the crude to the
-elegant way.</p>
-<p>I first write a little text file out to disk:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">]</span>
-<span class="n">fobj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;some_numbers.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;wt&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="c1"># String version of number, plus end-of-line character</span>
-    <span class="n">fobj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">fobj</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now I read it back again. First, I will read the all the lines in one shot,
-returning a list of strings:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fobj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;some_numbers.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">fobj</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.2\n&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Next I will read the file, but converting each number to a float:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fobj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;some_numbers.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span>
-<span class="n">numbers_again</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fobj</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-    <span class="n">numbers_again</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
-<span class="n">numbers_again</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.2, 2.3, 3.4, 4.5]
-</pre></div>
-</div>
-</div>
-</div>
-<p>In fact we can do this even more simply by using <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;some_numbers.txt&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.2, 2.3, 3.4, 4.5])
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="loading-data-with-nibabel">
 <h2>Loading data with Nibabel<a class="headerlink" href="#loading-data-with-nibabel" title="Permalink to this headline">¶</a></h2>
 <p>Nibabel allows us to <code class="docutils literal notranslate"><span class="pre">load</span></code> images. First we need to <code class="docutils literal notranslate"><span class="pre">import</span></code> the nibabel
@@ -716,9 +679,9 @@ library:</p>
 </div>
 </div>
 </div>
-<p>I am going to load the image with filename <code class="docutils literal notranslate"><span class="pre">ds114_sub009_t2r1.nii</span></code>.</p>
-<p>First I use the <code class="docutils literal notranslate"><span class="pre">nipraxis</span></code> utility to find the file on the web and download it
-to the computer I’m working on.</p>
+<p>We are going to load the image with filename <code class="docutils literal notranslate"><span class="pre">ds114_sub009_t2r1.nii</span></code>.</p>
+<p>First we use the <code class="docutils literal notranslate"><span class="pre">nipraxis</span></code> utility to find the file on the web and download
+it to the computer we are working on.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the utility.</span>
@@ -732,12 +695,15 @@ to the computer I’m working on.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/mb312/Library/Caches/nipraxis/0.2/ds114_sub009_t2r1.nii&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;ds114_sub009_t2r1.nii&#39; from &#39;https://raw.githubusercontent.com/nipraxis/nipraxis-data/0.3/ds114_sub009_t2r1.nii&#39; to &#39;/home/runner/.cache/nipraxis/0.3&#39;.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/runner/.cache/nipraxis/0.3/ds114_sub009_t2r1.nii&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>Next I <code class="docutils literal notranslate"><span class="pre">load</span></code> the image, to give me an “image” object:</p>
+<p>Next we <code class="docutils literal notranslate"><span class="pre">load</span></code> the image, to give me an “image” object:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">image_fname</span><span class="p">)</span>
@@ -751,8 +717,11 @@ to the computer I’m working on.</p>
 </div>
 </div>
 </div>
-<p>You can explore the image object with <code class="docutils literal notranslate"><span class="pre">img.</span></code> followed by TAB at the IPython
-prompt.</p>
+<p>You can explore the image object with <code class="docutils literal notranslate"><span class="pre">img.</span></code> followed by the Tab key at the
+Jupyter / IPython prompt.</p>
+</div>
+<div class="section" id="saving-memory">
+<h2>Saving memory<a class="headerlink" href="#saving-memory" title="Permalink to this headline">¶</a></h2>
 <p>Because images can have large arrays, Nibabel does not load the image array
 when you <code class="docutils literal notranslate"><span class="pre">load</span></code> the image, in order to save time and memory. The best way to
 get the image array data is with the <code class="docutils literal notranslate"><span class="pre">get_fdata()</span></code> method.</p>
@@ -769,9 +738,11 @@ get the image array data is with the <code class="docutils literal notranslate">
 </div>
 </div>
 </div>
+<p>See <a class="reference external" href="https://nipy.org/nibabel/images_and_memory.html">Nibabel images and
+memory</a> for more detail.</p>
 </div>
 <div class="section" id="four-dimensional-arrays-space-time">
-<h2>Four dimensional arrays - space + time<a class="headerlink" href="#four-dimensional-arrays-space-time" title="Permalink to this headline">¶</a></h2>
+<h2>Four dimensional arrays: space + time<a class="headerlink" href="#four-dimensional-arrays-space-time" title="Permalink to this headline">¶</a></h2>
 <p>The image we have just loaded is a four-dimensional image, with a
 four-dimensional array:</p>
 <div class="cell docutils container">
@@ -787,10 +758,10 @@ four-dimensional array:</p>
 </div>
 </div>
 <p>The first three axes represent three dimensional space. The last axis
-represents time. Here the last (time) axis has length 173. This means that, for
-each of these 173 elements, there is one whole three dimensional image. We
-often call the three-dimensional images <em>volumes</em>. So we could say that this 4D
-image contains 173 volumes.</p>
+represents time. Here the last (time) axis has length 173. This means that,
+for each of these 173 elements, there is one whole three dimensional image. We
+often call the three-dimensional images <em>volumes</em>. So we could say that this
+4D image contains 173 volumes.</p>
 <p>We have previously been taking slices over the third axis of a
 three-dimensional image. We can now take slices over the fourth axis of this
 four-dimensional image:</p>
@@ -836,10 +807,10 @@ exactly the same meaning:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x11de69fd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f278a76b370&gt;
 </pre></div>
 </div>
-<img alt="_images/intro_to_4d_28_1.png" src="_images/intro_to_4d_28_1.png" />
+<img alt="_images/intro_to_4d_21_1.png" src="_images/intro_to_4d_21_1.png" />
 </div>
 </div>
 </div>
@@ -887,10 +858,10 @@ across time):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x11df77c10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f2788665a90&gt;
 </pre></div>
 </div>
-<img alt="_images/intro_to_4d_34_1.png" src="_images/intro_to_4d_34_1.png" />
+<img alt="_images/intro_to_4d_27_1.png" src="_images/intro_to_4d_27_1.png" />
 </div>
 </div>
 </div>

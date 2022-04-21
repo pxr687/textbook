@@ -1,0 +1,222 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.0'
+      jupytext_version: 0.8.1
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+  language_info:
+    codemirror_mode:
+      name: ipython
+      version: 3
+    file_extension: .py
+    mimetype: text/x-python
+    name: python
+    nbconvert_exporter: python
+    pygments_lexer: ipython3
+    version: 3.6.5
+---
+
+# Three-dimensional images, NIfTI
+
+```{python}
+# Our usual set-up
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Set 'gray' as the default colormap
+plt.rcParams['image.cmap'] = 'gray'
+
+# Display array values to 4 digits of precision
+np.set_printoptions(precision=4, suppress=True)
+```
+
+We will spend a lot of time loading data from brain images.
+
+MRI images for functional MRI analysis are usually stored using the [NIfTI
+format](https://nifti.nimh.nih.gov/nifti-1).
+
+As you've already seen, this is a very simple format that is typically a
+single file with extension `.nii`.  If the file is compressed, it will end
+with `.nii.gz` instead.
+
+Inside, the file contains:
+
+* 348 bytes of *header* information.  Among other things, the header
+  gives the 3D or 4D shape of the file, and the data type of the pixel
+  (voxel) data.
+* Usually, directly after the header, we have the image data.  If the image
+  data is shape (I, J, K), and S is the number of bytes to store the data for
+  one pixel (voxel) value, then the image data is `I * J * K * S` in length.
+  For example, the image might be shape 64, 64, 32, and the data type might be
+  64-bit float, which is 8 bytes long, so the image data would be
+  `64 * 64 * 32 * 8` bytes long.
+
+To load these images into Python, use the [Nibabel](http://nipy.org/nibabel)
+package.
+
+Start by importing the Nibabel library:
+
+```{python}
+import nibabel as nib
+```
+
+We will use the Nipraxis package to fetch the image data file:
+
+```{python}
+import nipraxis
+
+structural_fname = nipraxis.fetch_file('ds114_sub009_highres.nii')
+structural_fname
+```
+
+Load the image into memory:
+
+```{python}
+img = nib.load(structural_fname)
+img
+```
+
+The image has a "header" containing the information about the image:
+
+```{python}
+print(img.header)
+```
+
+If you happen to have the [FSL
+package](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/) installed, you can get the
+same information from FSL's `fslinfo`. If you do have FSL, run this command
+from the terminal:
+
+```
+fslinfo ds114_sub009_highres.nii
+```
+
+It is important to have a clear picture of what we are dealing with.
+First, we have the NIfTI file, which is a regular file stored in a hard disk with name `ds114_sub009_highres.nii`.
+In order to access the contents of the file, we invoked NiBabel's `load()` function.
+The call created a Pyton representation (meaning, a Python object) that is capable of understanding the NIfTI format and therefore access the file.
+As an example, we printed out the information contained in the header with NiBabel's interface.
+The interface has other convenience tools to access information about the image, for instance, the shape of the data grid contained by the NIfTI file:
+
+```{python}
+img.shape
+```
+
+Think of this as 256 2D images, stacked on top of one another.
+Each 2D image is a "slice", of shape (256, 156).
+
+At this point, we haven't accessed yet the actual values that make up this image.
+Because we haven't done so yet, NiBabel has not allocated any memory space for it, meaning, data remains sitting in a hard disk and it has not been copied into your RAM (random access memory or fast memory).
+When you are ready to visualize or analyze the data, you will need to create such a copy into the fast memory of your machine.
+
+Like the `img.header` property, NiBabel's representation of NIfTI images offers direct access to the data array through its own property:
+
+```
+img.dataobj
+```
+
+Accessing the data array directly with `img.dataobj` is generally not recommended.
+Instead, we can load the image data directly as an array of floating point numbers with `img.get_fdata()`.
+Once loaded, we can confirm that now the values in the NIfTI file have been loaded into memory as a Numpy data array, of data type `float64`.
+
+```{python}
+data = img.get_fdata()
+data.dtype
+```
+
+Naturally, we can use all the tooling Numpy offers, for example, to extract summary statistics:
+
+```{python}
+print(f"The mean intensity of this image is {data.mean()}, and the standard deviation is {data.std()}.")
+```
+
+To get a sense of what a 2D slice looks like, let's visualize the middle slice:
+
+```{python}
+middle_slice = data[:, :, img.shape[-1] // 2 - 1]
+plt.imshow(middle_slice)
+```
+
+We might be interested to look at the histogram of voxel values in this 3D block.
+In order to do that, we `np.ravel` the 3D volume to 1D, to throw away the spatial arrangement of the voxels.
+
+```{python}
+# Show histogram of the values in the 3D image.
+plt.hist(np.ravel(data), bins=100);
+```
+
+At a bird's eye view, the extremes of the histogram are the most informative bits.
+On the far end, the histogram extends to very large voxel values (a bit above 3000) with very small voxel counts (just a few voxels that are very bright).
+On the origin, there's a massive amount of pixels with zero or almost-zero value (corresponding to the background).
+Let's plot the histogram corresponding to values above zero to exclude the very large number of zero-valued voxels, and below 1000 to exclude the scarce voxels with very high values.
+
+```{python}
+# Show histogram of the values in the 3D image.
+plt.hist(data[(data > 0) & (data < 1000)], bins=100);
+```
+
+Let us return to the middle slice. As for any array, we can transpose it, to flip the rows and the columns:
+
+```{python}
+plt.imshow(middle_slice.T)
+```
+
+To get the display you usually see in dedicated imaging display software, we
+need to transpose *and* flip up to down:
+
+```{python}
+to_display = np.flipud(middle_slice.T)
+plt.imshow(to_display)
+```
+
+We are looking at a slice *over the third dimension*.  We will sometimes refer
+to this as a *plane*.  We can see that the planes are 2D images, where left to
+right is the first axis, and back to front is the second axis.
+
+As in [arrays and 3D](arrays_3d), we can think of the 3D image as a stack of
+planes, where the bottom plane is the first, then the second is the second
+from bottom, and so on:
+
+![](images/image_plane_stack.png)
+
+We can also think of this 3D image as a stack of 2D images where the 2D images are (back to front, bottom to top), like this:
+
+```{python}
+yz_slice = data[img.shape[0] // 2 - 1, :, :]
+yz_slice.shape
+```
+
+```{python}
+plt.imshow(yz_slice)
+```
+
+Here, we have all the pixels corresponding to 127 in the left to right
+direction, giving us an image of shape (156, 256).
+
+![](images/image_plane_stack_row.png)
+
+Here's a coronal slice:
+
+```{python}
+xz_slice = data[:, 78, :]
+xz_slice.shape
+```
+
+```{python}
+plt.imshow(xz_slice)
+```
+
+![](images/image_plane_stack_col.png)
+
+
+NiBabel's Python representation of images offers a helpful utility to look at images through three viewplanes, implemented as a function attached to image objects (hence, a *method* of the object):
+
+```{python}
+img.orthoview()
+```
