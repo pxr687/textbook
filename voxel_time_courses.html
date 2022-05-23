@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voxel time courses &#8212; Practice and theory of brain imaging</title>
+    <title>Correlating with voxel time courses &#8212; Practice and theory of brain imaging</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Encoding zooms (scaling) with a diagonal matrix" href="diagonal_zooms.html" />
-    <link rel="prev" title="Reshaping 4D images to 2D arrays" href="voxels_by_time.html" />
+    <link rel="next" title="Convolution" href="on_convolution.html" />
+    <link rel="prev" title="On testing" href="on_testing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -199,23 +199,138 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="intro_to_4d.html">
+   Working with four dimensional images, masks and functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="otsu_threshold.html">
-   Otsu’s method for binarizing images
+  <a class="reference internal" href="reshape_and_4d.html">
+   Reshaping, 4D to 2D
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_random.html">
-   Random numbers with
+  <a class="reference internal" href="voxels_by_time.html">
+   Voxels and time
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working reproducibly
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_modules.html">
+   Modules and scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sys_path.html">
+   Where does Python look for modules?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assert.html">
+   Using
    <code class="docutils literal notranslate">
     <span class="pre">
-     np.random
+     assert
     </span>
    </code>
+   for testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_manipulation.html">
+   Making and breaking file paths in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Python coding style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstrings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_directories.html">
+   Module directories
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_testing.html">
+   On testing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Detecting activation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Correlating with voxel time courses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_convolution.html">
+   Convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution_background.html">
+   Convolving with the hemodyamic response function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_regression.html">
+   Introducing regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glm_intro.html">
+   Introduction to the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="model_one_voxel.html">
+   Modeling a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_test_example.html">
+   A worked example of the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hypothesis_tests.html">
+   Hypothesis testing with the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="test_one_voxel.html">
+   Testing a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi_multiply.html">
+   Estimation for many voxels at the same time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_tr_onsets.html">
+   Using onsets that do not start on a TR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="whole_image_statistics.html">
+   Whole-brain t tests and p values
   </a>
  </li>
 </ul>
@@ -231,11 +346,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reshape_and_4d.html">
-   Reshaping, 4D to 2D
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="allclose.html">
    Testing for near equality with “allclose”
   </a>
@@ -246,6 +356,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="dot_outer.html">
    Vector and matrix dot products, “np.outer”
   </a>
@@ -253,6 +368,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="newaxis.html">
    Adding length 1 dimensions with newaxis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="array_reductions.html">
+   Array reduction operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_random.html">
+   Random numbers with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     np.random
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -268,28 +398,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="subplots.html">
    Subplots and axes in matplotlib
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Into the fourth dimension
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_to_4d.html">
-   Working with four dimensional images, masks and functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxels_by_time.html">
-   Reshaping 4D images to 2D arrays
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Voxel time courses
   </a>
  </li>
 </ul>
@@ -368,91 +476,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="anterior_cingulate.html">
    Anterior cingulate
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Statistics and the general linear model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mean_test_example.html">
-   A worked example of the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hypothesis_tests.html">
-   Hypothesis testing with the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="convolution_background.html">
-   Convolving with the hemodyamic response function
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="model_one_voxel.html">
-   Modeling a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="test_one_voxel.html">
-   Testing a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="multi_multiply.html">
-   Estimation for many voxels at the same time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="non_tr_onsets.html">
-   Using onsets that do not start on a TR
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="whole_image_statistics.html">
-   Whole-brain t tests and p values
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Code organization and collaboration
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="on_modules.html">
-   Modules and scripts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="path_manipulation.html">
-   Making and breaking file paths in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sys_path.html">
-   Where does Python look for modules?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assert.html">
-   Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     assert
-    </span>
-   </code>
-   for testing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coding_style.html">
-   Python coding style
   </a>
  </li>
 </ul>
@@ -563,6 +586,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-reminder-on-correlation">
+   A reminder on correlation
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -570,19 +606,32 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Voxel time courses</h1>
+                <h1>Correlating with voxel time courses</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-reminder-on-correlation">
+   A reminder on correlation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="voxel-time-courses">
-<h1>Voxel time courses<a class="headerlink" href="#voxel-time-courses" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="correlating-with-voxel-time-courses">
+<h1>Correlating with voxel time courses<a class="headerlink" href="#correlating-with-voxel-time-courses" title="Permalink to this headline">¶</a></h1>
 <p>When we have a 4D image, we can think of the data in several ways.  For
 example the data could be:</p>
 <ul class="simple">
@@ -649,8 +698,9 @@ from the rest of the volumes in the series:</p>
 </div>
 </div>
 </div>
-<p>We can think of this 4D data as a series of 3D volumes.  That is the way we
-have been thinking of the 4D data so far:</p>
+<p>As you have seen in <a class="reference internal" href="intro_to_4d.html"><span class="doc std std-doc">the 4D introduction</span></a>, we can think of
+this 4D data as a series of 3D volumes.  That is the way we have been thinking
+of the 4D data so far:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is slicing over the last (time) axis</span>
@@ -665,35 +715,25 @@ have been thinking of the 4D data so far:</p>
 </div>
 </div>
 </div>
-<p>We can also index over the first three axes.  The first three axes in this
-array represent space.</p>
-<ul class="simple">
-<li><p>The first axis goes from right to left (0 index value means right, 63 means
-left);</p></li>
-<li><p>The second axis goes from back to front (0 index value means back, 63 means
-front);</p></li>
-<li><p>The third axes goes from bottom to top (0 means bottom, 29 means top).</p></li>
-</ul>
-<p>If you give me index values for these first three axes, you have given me a
-<em>coordinate</em> in the first three axes of the array.</p>
-<p>For example, you could give me an index tuple for the first three axes like
-this: <code class="docutils literal notranslate"><span class="pre">(42,</span> <span class="pre">32,</span> <span class="pre">19)</span></code>.  The first index of 42 refers to a position towards
-the left of the brain (&gt; 31).  The second index of 32 refers to a position
-almost in the center front to back.  The last index of 19 refers to a position
-a little further towards the top of the brain – in this image.</p>
-<p>This coordinate therefore refers to a particular part of the image:</p>
+<p>In that page, we found a 3D <em>coordinate</em> for an interesting voxel. The 3D coordinate is just the indices in the first three dimensions — the dimensions representing space.  We can write the coordinate as indices in a tuple like
+this: <code class="docutils literal notranslate"><span class="pre">(42,</span> <span class="pre">32,</span> <span class="pre">19)</span></code>.  As you saw in the 4D page, the first index of 42 refers
+to a position towards the left of the brain (&gt; 31).  The second index of 32
+refers to a position almost in the center front to back.  The last index of 19
+refers to a position a little further towards the top of the brain – in this
+image.</p>
+<p>Here is the position of that coordinate displayed on a plane of the 3D volume (in fact, the mean volume).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Where is this in the brain?</span>
 <span class="n">mean_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1"># Make a nice bright dot in the right place</span>
 <span class="n">mean_data</span><span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">mean_data</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">19</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">19</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f8a82e3f520&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fb4b7d0eb20&gt;
 </pre></div>
 </div>
 <img alt="_images/voxel_time_courses_10_1.png" src="_images/voxel_time_courses_10_1.png" />
@@ -714,16 +754,16 @@ with the image value at that position (43, 32, 19), for every point in time:</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(172,)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8a82e76fd0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb4bc279190&gt;]
 </pre></div>
 </div>
 <img alt="_images/voxel_time_courses_12_2.png" src="_images/voxel_time_courses_12_2.png" />
 </div>
 </div>
-<p>We could call this a “voxel time course”.</p>
-<p>We might want to do ordinary statistical type things with this time course.
-For example, we might want to correlate this time course with a measure of
-whether the subject was doing the task or not.</p>
+<p>This is a “voxel time course”.</p>
+<p>We might want to do ordinary statistical type things with this time course. For
+example, we might want to correlate this time course with a measure of whether
+the subject was doing the task or not.</p>
 <p>This measure will have 1 for each volume (time point) where the subject was
 doing the task, and 0 for each volume where the subject was at rest.</p>
 <p>We call this a “neural” time course, because we believe that the nerves in the
@@ -759,7 +799,7 @@ data:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8a82d39370&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb4b5b97a00&gt;]
 </pre></div>
 </div>
 <img alt="_images/voxel_time_courses_15_1.png" src="_images/voxel_time_courses_15_1.png" />
@@ -790,7 +830,8 @@ time course:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correlate the neural time course with the voxel time course</span>
-<span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">neural</span><span class="p">,</span> <span class="n">voxel_time_course</span><span class="p">)</span>
+<span class="n">corr_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">neural</span><span class="p">,</span> <span class="n">voxel_time_course</span><span class="p">)</span>
+<span class="n">corr_array</span>
 </pre></div>
 </div>
 </div>
@@ -798,6 +839,117 @@ time course:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.    , 0.5429],
        [0.5429, 1.    ]])
 </pre></div>
+</div>
+</div>
+</div>
+<p>Notice that Numpy has correlated <code class="docutils literal notranslate"><span class="pre">neural</span></code> with <code class="docutils literal notranslate"><span class="pre">neural</span></code> — to give 1 — and <code class="docutils literal notranslate"><span class="pre">voxel_time_course</span></code>, to give:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correlation of neural (row 0) with voxel_time_course (column 1)</span>
+<span class="n">correlation</span> <span class="o">=</span> <span class="n">corr_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">correlation</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5428503395516837
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the same way it has correlated <code class="docutils literal notranslate"><span class="pre">voxel_time_course</span></code> with <code class="docutils literal notranslate"><span class="pre">neural</span></code> and <code class="docutils literal notranslate"><span class="pre">voxel_time_course</span></code>, to give a 2 by 2 array.</p>
+<div class="section" id="a-reminder-on-correlation">
+<span id="on-correlation"></span><h2>A reminder on correlation<a class="headerlink" href="#a-reminder-on-correlation" title="Permalink to this headline">¶</a></h2>
+<p>We are sure that correlation is familiar to you, but here we define it, as a reminder.</p>
+<blockquote>
+<div><p>Correlation between two 1D arrays is the result of converting each array to
+z-scores, element-wise multiplying the z-score arrays, and taking the mean of
+the result.</p>
+</div></blockquote>
+<p>Turning an array into a z-score (AKA <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_score">standard
+score</a>) is the operation of:</p>
+<ul class="simple">
+<li><p>Subtracting the mean of the array then</p></li>
+<li><p>Dividing by the standard deviation.</p></li>
+</ul>
+<p>Let’s do that for the two arrays above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># z-scores for voxel_time_course.</span>
+<span class="n">vtc_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">voxel_time_course</span><span class="p">)</span>
+<span class="n">vtc_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">voxel_time_course</span><span class="p">)</span>
+<span class="n">vtc_z_scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">voxel_time_course</span> <span class="o">-</span> <span class="n">vtc_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">vtc_std</span>
+<span class="c1"># Show the first 10 values.</span>
+<span class="n">vtc_z_scores</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.0652, -0.0194, -0.1109, -1.163 ,  0.4837,  1.6273,  1.673 ,
+        0.621 ,  0.4837,  0.621 ])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># z-scores for neural time course</span>
+<span class="n">neural_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">neural</span><span class="p">)</span>
+<span class="n">neural_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">neural</span><span class="p">)</span>
+<span class="n">neural_z_scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">neural</span> <span class="o">-</span> <span class="n">neural_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">neural_std</span>
+<span class="n">neural_z_scores</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.977 , -0.977 , -0.977 ,  1.0235,  1.0235,  1.0235,  1.0235,
+        1.0235,  1.0235,  1.0235])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we multiply them together, using the usual element by element Numpy multiplication rules for arrays:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multiplied</span> <span class="o">=</span> <span class="n">vtc_z_scores</span> <span class="o">*</span> <span class="n">neural_z_scores</span>
+<span class="n">multiplied</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.0637,  0.019 ,  0.1083, -1.1903,  0.4951,  1.6656,  1.7124,
+        0.6356,  0.4951,  0.6356])
+</pre></div>
+</div>
+</div>
+</div>
+<p>To calculate the correlation, we take the mean:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation_again</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">multiplied</span><span class="p">)</span>
+<span class="n">correlation_again</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5428503395516836
+</pre></div>
+</div>
+</div>
+</div>
+<p>This recalculation is very very close to the original.  The difference is so
+tiny we can put it down to <a class="reference external" href="https://matthew-brett.github.io/teaching/floating_error.html">floating point
+error</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">correlation</span><span class="p">,</span> <span class="n">correlation_again</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -828,17 +980,17 @@ time course:</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="voxels_by_time.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="on_testing.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Reshaping 4D images to 2D arrays</p>
+            <p class="prev-next-title">On testing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="diagonal_zooms.html" title="next page">
+    <a class='right-next' id="next-link" href="on_convolution.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Encoding zooms (scaling) with a diagonal matrix</p>
+        <p class="prev-next-title">Convolution</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

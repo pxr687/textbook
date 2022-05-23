@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logical operations on boolean arrays &#8212; Practice and theory of brain imaging</title>
+    <title>Logical operations on Boolean arrays &#8212; Practice and theory of brain imaging</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Otsu’s method for binarizing images" href="otsu_threshold.html" />
-    <link rel="prev" title="Boolean indexing with more than one dimension" href="boolean_indexing_nd.html" />
+    <link rel="next" title="Vector and matrix dot products, “np.outer”" href="dot_outer.html" />
+    <link rel="prev" title="NumPy arange" href="arange.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
   Images and code and images
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="what_is_an_image.html">
    What is an image?
@@ -198,24 +198,139 @@ const thebe_selector_output = ".output, .cell_output"
    Boolean indexing with more than one dimension
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Logical operations on boolean arrays
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_to_4d.html">
+   Working with four dimensional images, masks and functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="otsu_threshold.html">
-   Otsu’s method for binarizing images
+  <a class="reference internal" href="reshape_and_4d.html">
+   Reshaping, 4D to 2D
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_random.html">
-   Random numbers with
+  <a class="reference internal" href="voxels_by_time.html">
+   Voxels and time
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working reproducibly
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_modules.html">
+   Modules and scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sys_path.html">
+   Where does Python look for modules?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assert.html">
+   Using
    <code class="docutils literal notranslate">
     <span class="pre">
-     np.random
+     assert
     </span>
    </code>
+   for testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_manipulation.html">
+   Making and breaking file paths in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Python coding style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstrings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_directories.html">
+   Module directories
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_testing.html">
+   On testing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Detecting activation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="voxel_time_courses.html">
+   Correlating with voxel time courses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_convolution.html">
+   Convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution_background.html">
+   Convolving with the hemodyamic response function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_regression.html">
+   Introducing regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glm_intro.html">
+   Introduction to the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="model_one_voxel.html">
+   Modeling a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_test_example.html">
+   A worked example of the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hypothesis_tests.html">
+   Hypothesis testing with the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="test_one_voxel.html">
+   Testing a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi_multiply.html">
+   Estimation for many voxels at the same time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_tr_onsets.html">
+   Using onsets that do not start on a TR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="whole_image_statistics.html">
+   Whole-brain t tests and p values
   </a>
  </li>
 </ul>
@@ -224,15 +339,10 @@ const thebe_selector_output = ".output, .cell_output"
   Arrays and plots
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="methods_vs_functions.html">
    Methods vs functions in NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reshape_and_4d.html">
-   Reshaping, 4D to 2D
   </a>
  </li>
  <li class="toctree-l1">
@@ -245,6 +355,11 @@ const thebe_selector_output = ".output, .cell_output"
    NumPy arange
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Logical operations on Boolean arrays
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dot_outer.html">
    Vector and matrix dot products, “np.outer”
@@ -253,6 +368,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="newaxis.html">
    Adding length 1 dimensions with newaxis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="array_reductions.html">
+   Array reduction operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_random.html">
+   Random numbers with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     np.random
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -268,28 +398,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="subplots.html">
    Subplots and axes in matplotlib
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Into the fourth dimension
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_to_4d.html">
-   Working with four dimensional images, masks and functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxels_by_time.html">
-   Reshaping 4D images to 2D arrays
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxel_time_courses.html">
-   Voxel time courses
   </a>
  </li>
 </ul>
@@ -368,91 +476,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="anterior_cingulate.html">
    Anterior cingulate
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Statistics and the general linear model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mean_test_example.html">
-   A worked example of the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hypothesis_tests.html">
-   Hypothesis testing with the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="convolution_background.html">
-   Convolving with the hemodyamic response function
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="model_one_voxel.html">
-   Modeling a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="test_one_voxel.html">
-   Testing a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="multi_multiply.html">
-   Estimation for many voxels at the same time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="non_tr_onsets.html">
-   Using onsets that do not start on a TR
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="whole_image_statistics.html">
-   Whole-brain t tests and p values
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Code organization and collaboration
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="on_modules.html">
-   Modules and scripts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="path_manipulation.html">
-   Making and breaking file paths in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sys_path.html">
-   Where does Python look for modules?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assert.html">
-   Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     assert
-    </span>
-   </code>
-   for testing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coding_style.html">
-   Python coding style
   </a>
  </li>
 </ul>
@@ -563,6 +586,24 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-bitwise-operators">
+   Using the bitwise operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bitwise-brackets">
+   Bitwise, brackets
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -570,11 +611,29 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Logical operations on boolean arrays</h1>
+                <h1>Logical operations on Boolean arrays</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-bitwise-operators">
+   Using the bitwise operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bitwise-brackets">
+   Bitwise, brackets
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -582,10 +641,10 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="logical-operations-on-boolean-arrays">
-<h1>Logical operations on boolean arrays<a class="headerlink" href="#logical-operations-on-boolean-arrays" title="Permalink to this headline">¶</a></h1>
+<h1>Logical operations on Boolean arrays<a class="headerlink" href="#logical-operations-on-boolean-arrays" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">np.logical_and</span></code>, <code class="docutils literal notranslate"><span class="pre">np.logical_or</span></code>:</p>
-<p>Sometimes we want to combine boolean values using logical operators like AND,
-OR, NOT.  This is straightforward for Python booleans:</p>
+<p>Sometimes we want to combine Boolean values using logical operators like AND,
+OR, NOT.  This is straightforward for Python Booleans:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Logical AND - True only if both are True</span>
@@ -633,8 +692,8 @@ True
 </div>
 </div>
 </div>
-<p>We have to do a little more work for <em>arrays</em> of booleans, because the Python
-<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code> operators only return a single boolean values, and so
+<p>We have to do a little more work for <em>arrays</em> of Booleans, because the Python
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code> operators only return a single Boolean values, and so
 do not operate as we expect on arrays:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -725,7 +784,15 @@ do not operate as we expect on arrays:</p>
 </div>
 </div>
 </div>
-<p>Equivalently, the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code> and <code class="docutils literal notranslate"><span class="pre">~</span></code> operators are applied elementwise:</p>
+<div class="section" id="using-the-bitwise-operators">
+<h2>Using the bitwise operators<a class="headerlink" href="#using-the-bitwise-operators" title="Permalink to this headline">¶</a></h2>
+<p>Equivalently, the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code> and <code class="docutils literal notranslate"><span class="pre">~</span></code> operators are applied elementwise.</p>
+<p>These are called <em>bitwise</em> operators, for reasons we do not need to go into here.  <em>Iff applied to Boolean values</em> then:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> gives the same result as <code class="docutils literal notranslate"><span class="pre">np.logical_and</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> gives the same result as <code class="docutils literal notranslate"><span class="pre">np.logical_or</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~</span></code> gives the same result as <code class="docutils literal notranslate"><span class="pre">np.logical_not</span></code></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bool1</span> <span class="o">&amp;</span> <span class="n">bool2</span>
@@ -763,6 +830,181 @@ do not operate as we expect on arrays:</p>
 </div>
 </div>
 </div>
+<div class="section" id="bitwise-brackets">
+<h2>Bitwise, brackets<a class="headerlink" href="#bitwise-brackets" title="Permalink to this headline">¶</a></h2>
+<p><strong>Be careful when using the bitwise operators</strong>.  The bitwise operators have
+relatively high operator precedence, meaning that Python will prefer to apply
+the bitwise operator <em>before</em> other operators, such as comparison operators.</p>
+<p>For example, consider these arrays, and the Boolean arrays from their comparison:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">first</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False,  True])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">second</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True,  True])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will give an error.  Why?</span>
+<span class="n">first</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="n">second</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [16],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This will give an error.  Why?</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">first</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="n">second</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+</pre></div>
+</div>
+</div>
+</div>
+<p>The problem is that Numpy registers <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> as having <a class="reference external" href="https://docs.python.org/3/reference/expressions.html#operator-precedence">higher operator
+preference</a>
+than <code class="docutils literal notranslate"><span class="pre">==</span></code>, so it does the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operation before the <code class="docutils literal notranslate"><span class="pre">==</span></code>, meaning that the code
+above is equivalent to:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="n">second</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [17],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">first</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="n">second</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+</pre></div>
+</div>
+</div>
+</div>
+<p>Therefore, you get the error like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python is doing this under the hood in the statement above.</span>
+<span class="n">res</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="n">second</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python next does this, generating the error.</span>
+<span class="n">first</span> <span class="o">==</span> <span class="n">res</span> <span class="o">==</span> <span class="n">second</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [19],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Python next does this, generating the error.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">first</span> <span class="o">==</span> <span class="n">res</span> <span class="o">==</span> <span class="n">second</span>
+
+<span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+</pre></div>
+</div>
+</div>
+</div>
+<p>The exact reason this last statement gives an error is <a class="reference external" href="https://docs.python.org/3/reference/expressions.html#comparisons">a little
+advanced</a>. It
+is because Python <em>internally</em> translates the statement above to:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python internally translates &quot;first == res == second) to:</span>
+<span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="n">res</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">second</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [20],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Python internally translates &quot;first == res == second) to:</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="n">res</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">second</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+</pre></div>
+</div>
+</div>
+</div>
+<p>The problem with this internal translation is that <code class="docutils literal notranslate"><span class="pre">and</span></code> does not work when
+comparing arrays:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &quot;and&quot; does not work on arrays.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [21],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># &quot;and&quot; does not work on arrays.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+
+<span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+</pre></div>
+</div>
+</div>
+</div>
+<p>The fix is to specify that you want the <code class="docutils literal notranslate"><span class="pre">==</span></code> operation done <em>before</em> the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>
+operation, using parentheses:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Guarantee the order of operations with parentheses.</span>
+<span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">second</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True])
+</pre></div>
+</div>
+</div>
+</div>
+<p>To avoid worrying about this problem, you might prefer to use <code class="docutils literal notranslate"><span class="pre">np.logical_and</span></code>
+etc:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The same operation using logical_and</span>
+<span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="n">second</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -789,17 +1031,17 @@ do not operate as we expect on arrays:</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="boolean_indexing_nd.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="arange.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Boolean indexing with more than one dimension</p>
+            <p class="prev-next-title">NumPy arange</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="otsu_threshold.html" title="next page">
+    <a class='right-next' id="next-link" href="dot_outer.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Otsu’s method for binarizing images</p>
+        <p class="prev-next-title">Vector and matrix dot products, “np.outer”</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

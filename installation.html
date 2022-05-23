@@ -199,23 +199,138 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="intro_to_4d.html">
+   Working with four dimensional images, masks and functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="otsu_threshold.html">
-   Otsu’s method for binarizing images
+  <a class="reference internal" href="reshape_and_4d.html">
+   Reshaping, 4D to 2D
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_random.html">
-   Random numbers with
+  <a class="reference internal" href="voxels_by_time.html">
+   Voxels and time
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working reproducibly
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_modules.html">
+   Modules and scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sys_path.html">
+   Where does Python look for modules?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assert.html">
+   Using
    <code class="docutils literal notranslate">
     <span class="pre">
-     np.random
+     assert
     </span>
    </code>
+   for testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_manipulation.html">
+   Making and breaking file paths in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Python coding style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstrings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_directories.html">
+   Module directories
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_testing.html">
+   On testing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Detecting activation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="voxel_time_courses.html">
+   Correlating with voxel time courses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_convolution.html">
+   Convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution_background.html">
+   Convolving with the hemodyamic response function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_regression.html">
+   Introducing regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glm_intro.html">
+   Introduction to the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="model_one_voxel.html">
+   Modeling a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_test_example.html">
+   A worked example of the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hypothesis_tests.html">
+   Hypothesis testing with the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="test_one_voxel.html">
+   Testing a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi_multiply.html">
+   Estimation for many voxels at the same time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_tr_onsets.html">
+   Using onsets that do not start on a TR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="whole_image_statistics.html">
+   Whole-brain t tests and p values
   </a>
  </li>
 </ul>
@@ -231,11 +346,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reshape_and_4d.html">
-   Reshaping, 4D to 2D
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="allclose.html">
    Testing for near equality with “allclose”
   </a>
@@ -246,6 +356,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="dot_outer.html">
    Vector and matrix dot products, “np.outer”
   </a>
@@ -253,6 +368,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="newaxis.html">
    Adding length 1 dimensions with newaxis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="array_reductions.html">
+   Array reduction operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_random.html">
+   Random numbers with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     np.random
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -268,28 +398,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="subplots.html">
    Subplots and axes in matplotlib
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Into the fourth dimension
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_to_4d.html">
-   Working with four dimensional images, masks and functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxels_by_time.html">
-   Reshaping 4D images to 2D arrays
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxel_time_courses.html">
-   Voxel time courses
   </a>
  </li>
 </ul>
@@ -368,91 +476,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="anterior_cingulate.html">
    Anterior cingulate
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Statistics and the general linear model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mean_test_example.html">
-   A worked example of the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hypothesis_tests.html">
-   Hypothesis testing with the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="convolution_background.html">
-   Convolving with the hemodyamic response function
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="model_one_voxel.html">
-   Modeling a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="test_one_voxel.html">
-   Testing a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="multi_multiply.html">
-   Estimation for many voxels at the same time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="non_tr_onsets.html">
-   Using onsets that do not start on a TR
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="whole_image_statistics.html">
-   Whole-brain t tests and p values
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Code organization and collaboration
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="on_modules.html">
-   Modules and scripts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="path_manipulation.html">
-   Making and breaking file paths in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sys_path.html">
-   Where does Python look for modules?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assert.html">
-   Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     assert
-    </span>
-   </code>
-   for testing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coding_style.html">
-   Python coding style
   </a>
  </li>
 </ul>
@@ -642,8 +665,8 @@ make sure you are running a <strong>Powershell</strong> shell, not the much olde
 </div>
 <p>This Prints the Working Directory (pwd).  You should see something like the following:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="91471d17-e6c9-42a5-86c6-feba06a9df77" name="aa50386a-06fc-4ff7-a5fb-908cf63dda2d" type="radio">
-</input><label class="tabbed-label" for="91471d17-e6c9-42a5-86c6-feba06a9df77">
+<input checked="checked" id="d9519270-2690-4e56-84f6-f142b38e3232" name="c5fe4229-1cc8-44fb-b936-d551245a0b3f" type="radio">
+</input><label class="tabbed-label" for="d9519270-2690-4e56-84f6-f142b38e3232">
 Windows Powershell</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Path</span>
 <span class="o">----</span>
@@ -651,15 +674,15 @@ Windows Powershell</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="3cd4d8f0-287f-4801-89c6-37bcbd0356b6" name="aa50386a-06fc-4ff7-a5fb-908cf63dda2d" type="radio">
-</input><label class="tabbed-label" for="3cd4d8f0-287f-4801-89c6-37bcbd0356b6">
+<input id="aac92065-5ab5-44ed-844a-ad3d446ef7fe" name="c5fe4229-1cc8-44fb-b936-d551245a0b3f" type="radio">
+</input><label class="tabbed-label" for="aac92065-5ab5-44ed-844a-ad3d446ef7fe">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">user</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">nipraxis</span><span class="o">-</span><span class="n">working</span>
 </pre></div>
 </div>
 </div>
-<input id="111f31e0-c305-4141-bb5d-b67b2496507a" name="aa50386a-06fc-4ff7-a5fb-908cf63dda2d" type="radio">
-</input><label class="tabbed-label" for="111f31e0-c305-4141-bb5d-b67b2496507a">
+<input id="b201140d-2ad3-4f6d-af3c-8aa6c3c12fa0" name="c5fe4229-1cc8-44fb-b936-d551245a0b3f" type="radio">
+</input><label class="tabbed-label" for="b201140d-2ad3-4f6d-af3c-8aa6c3c12fa0">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">user</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">nipraxis</span><span class="o">-</span><span class="n">working</span>
 </pre></div>
@@ -706,8 +729,8 @@ computer.   Note where the file went.  For example, you might have downloaded th
 </div>
 <p>from your terminal.  You should see something like:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f417d73a-9742-4525-a1ce-20eaa2ad350d" name="04681d51-8682-43df-9668-f8278b8d289a" type="radio">
-</input><label class="tabbed-label" for="f417d73a-9742-4525-a1ce-20eaa2ad350d">
+<input checked="checked" id="9610d350-ec6e-4c05-b04c-2ac73962dac3" name="f3f75b64-8ac1-48ab-babe-883ddd2f17a5" type="radio">
+</input><label class="tabbed-label" for="9610d350-ec6e-4c05-b04c-2ac73962dac3">
 Windows Powershell</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">your</span><span class="o">-</span><span class="n">user</span>\<span class="n">Documents</span>\<span class="n">nipraxis</span><span class="o">-</span><span class="n">work</span>
 
@@ -718,8 +741,8 @@ Windows Powershell</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="6304bb1d-9523-4d73-a337-921c13607954" name="04681d51-8682-43df-9668-f8278b8d289a" type="radio">
-</input><label class="tabbed-label" for="6304bb1d-9523-4d73-a337-921c13607954">
+<input id="5c885cb8-90ff-4c12-85d3-31c923041be8" name="f3f75b64-8ac1-48ab-babe-883ddd2f17a5" type="radio">
+</input><label class="tabbed-label" for="5c885cb8-90ff-4c12-85d3-31c923041be8">
 Mac or Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">check_install</span><span class="o">.</span><span class="n">py</span>
 </pre></div>

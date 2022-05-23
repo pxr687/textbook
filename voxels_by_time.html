@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reshaping 4D images to 2D arrays &#8212; Practice and theory of brain imaging</title>
+    <title>Voxels and time &#8212; Practice and theory of brain imaging</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Voxel time courses" href="voxel_time_courses.html" />
-    <link rel="prev" title="Working with four dimensional images, masks and functions" href="intro_to_4d.html" />
+    <link rel="next" title="Modules and scripts" href="on_modules.html" />
+    <link rel="prev" title="Reshaping, 4D to 2D" href="reshape_and_4d.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
   Images and code and images
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="what_is_an_image.html">
    What is an image?
@@ -199,23 +199,138 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="intro_to_4d.html">
+   Working with four dimensional images, masks and functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="otsu_threshold.html">
-   Otsu’s method for binarizing images
+  <a class="reference internal" href="reshape_and_4d.html">
+   Reshaping, 4D to 2D
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Voxels and time
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working reproducibly
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_modules.html">
+   Modules and scripts
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_random.html">
-   Random numbers with
+  <a class="reference internal" href="sys_path.html">
+   Where does Python look for modules?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assert.html">
+   Using
    <code class="docutils literal notranslate">
     <span class="pre">
-     np.random
+     assert
     </span>
    </code>
+   for testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_manipulation.html">
+   Making and breaking file paths in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Python coding style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstrings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_directories.html">
+   Module directories
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_testing.html">
+   On testing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Detecting activation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="voxel_time_courses.html">
+   Correlating with voxel time courses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_convolution.html">
+   Convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution_background.html">
+   Convolving with the hemodyamic response function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_regression.html">
+   Introducing regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glm_intro.html">
+   Introduction to the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="model_one_voxel.html">
+   Modeling a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_test_example.html">
+   A worked example of the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hypothesis_tests.html">
+   Hypothesis testing with the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="test_one_voxel.html">
+   Testing a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi_multiply.html">
+   Estimation for many voxels at the same time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_tr_onsets.html">
+   Using onsets that do not start on a TR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="whole_image_statistics.html">
+   Whole-brain t tests and p values
   </a>
  </li>
 </ul>
@@ -231,11 +346,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reshape_and_4d.html">
-   Reshaping, 4D to 2D
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="allclose.html">
    Testing for near equality with “allclose”
   </a>
@@ -246,6 +356,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="dot_outer.html">
    Vector and matrix dot products, “np.outer”
   </a>
@@ -253,6 +368,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="newaxis.html">
    Adding length 1 dimensions with newaxis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="array_reductions.html">
+   Array reduction operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_random.html">
+   Random numbers with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     np.random
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -268,28 +398,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="subplots.html">
    Subplots and axes in matplotlib
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Into the fourth dimension
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_to_4d.html">
-   Working with four dimensional images, masks and functions
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Reshaping 4D images to 2D arrays
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxel_time_courses.html">
-   Voxel time courses
   </a>
  </li>
 </ul>
@@ -368,91 +476,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="anterior_cingulate.html">
    Anterior cingulate
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Statistics and the general linear model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mean_test_example.html">
-   A worked example of the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hypothesis_tests.html">
-   Hypothesis testing with the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="convolution_background.html">
-   Convolving with the hemodyamic response function
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="model_one_voxel.html">
-   Modeling a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="test_one_voxel.html">
-   Testing a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="multi_multiply.html">
-   Estimation for many voxels at the same time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="non_tr_onsets.html">
-   Using onsets that do not start on a TR
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="whole_image_statistics.html">
-   Whole-brain t tests and p values
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Code organization and collaboration
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="on_modules.html">
-   Modules and scripts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="path_manipulation.html">
-   Making and breaking file paths in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sys_path.html">
-   Where does Python look for modules?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assert.html">
-   Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     assert
-    </span>
-   </code>
-   for testing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coding_style.html">
-   Python coding style
   </a>
  </li>
 </ul>
@@ -570,7 +593,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Reshaping 4D images to 2D arrays</h1>
+                <h1>Voxels and time</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -581,12 +604,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="reshaping-4d-images-to-2d-arrays">
-<h1>Reshaping 4D images to 2D arrays<a class="headerlink" href="#reshaping-4d-images-to-2d-arrays" title="Permalink to this headline">¶</a></h1>
-<p>See also: Reshaping, 4D to 2D.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="voxels-and-time">
+<h1>Voxels and time<a class="headerlink" href="#voxels-and-time" title="Permalink to this headline">¶</a></h1>
+<p>See also: <a class="reference internal" href="reshape_and_4d.html"><span class="doc std std-doc">Reshaping, 4D to 2D</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#: import common modules</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import common modules</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># the Python array package</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># the Python plotting package</span>
 <span class="c1"># Display array values to 6 digits of precision</span>
@@ -595,7 +618,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>In this example, we calculate the standard deviation across voxels at each
+<p>In this example, we calculate the mean across all voxels at each
 time point.</p>
 <p>We’re working on <code class="docutils literal notranslate"><span class="pre">ds114_sub009_t2r1.nii</span></code>.  This is a 4D FMRI image.</p>
 <div class="cell docutils container">
@@ -626,7 +649,7 @@ time point.</p>
 </div>
 </div>
 </div>
-<p>We want to calculate the standard deviation across all voxels.  Remember that a
+<p>We want to calculate the mean across all voxels.  Remember that a
 voxel is a pixel with volume, and refers to a position in space. Therefore we
 have this number of voxels in each volume:</p>
 <div class="cell docutils container">
@@ -642,38 +665,53 @@ have this number of voxels in each volume:</p>
 </div>
 </div>
 </div>
-<p>To calculate the standard deviation across voxels, we could loop across all
-volumes, and calculate the standard deviation for each volume:</p>
+<p>To calculate the mean across all voxels, for a single volume, we can do this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trs</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
-<span class="n">std_devs</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">vol_no</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_trs</span><span class="p">):</span>
-    <span class="n">vol</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">vol_no</span><span class="p">]</span>
-    <span class="n">std_devs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">vol</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">std_devs</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
+<span class="n">first_vol</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">first_vol</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6237e3f8e0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>414.40107421875
 </pre></div>
 </div>
-<img alt="_images/voxels_by_time_8_1.png" src="_images/voxels_by_time_8_1.png" />
+</div>
+</div>
+<p>To calculate the mean across voxels, we could loop across all
+volumes, and calculate the mean for each volume:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trs</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">means</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">vol_no</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_trs</span><span class="p">):</span>
+    <span class="n">vol</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">vol_no</span><span class="p">]</span>
+    <span class="n">means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vol</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">means</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f2878100b80&gt;]
+</pre></div>
+</div>
+<img alt="_images/voxels_by_time_10_1.png" src="_images/voxels_by_time_10_1.png" />
 </div>
 </div>
 <p>We could also flatten the three voxel axes out into one long voxel axis, using
-reshape – see: Reshaping, 4D to 2D.  Then we can use the <code class="docutils literal notranslate"><span class="pre">axis</span></code>
-parameter to the <code class="docutils literal notranslate"><span class="pre">np.std</span></code> function to calculate the standard deviation
-across voxels, in one shot.  This is “vectorizing”, where we take an operation
-that needed a loop, and use array operations to do the work instead:</p>
+reshape – see: <a class="reference internal" href="reshape_and_4d.html"><span class="doc std std-doc">Reshaping, 4D to 2D</span></a>.  Then we can use the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter to
+the <code class="docutils literal notranslate"><span class="pre">np.mean</span></code> function to calculate the mean across voxels, in one
+shot.  This is “vectorizing”, where we take an operation that needed a loop,
+and use array operations to do the work instead:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">voxels_by_time</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_voxels</span><span class="p">,</span> <span class="n">n_trs</span><span class="p">))</span>
-<span class="n">std_devs_vectorized</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">voxels_by_time</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">std_devs_vectorized</span><span class="p">,</span> <span class="n">std_devs</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">voxels_by_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">n_voxels</span><span class="p">,</span> <span class="n">n_trs</span><span class="p">))</span>
+<span class="n">means_vectorized</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">voxels_by_time</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># The answer is the same, allowing for tiny variations.</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">means_vectorized</span><span class="p">,</span> <span class="n">means</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -705,17 +743,17 @@ that needed a loop, and use array operations to do the work instead:</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intro_to_4d.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="reshape_and_4d.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Working with four dimensional images, masks and functions</p>
+            <p class="prev-next-title">Reshaping, 4D to 2D</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="voxel_time_courses.html" title="next page">
+    <a class='right-next' id="next-link" href="on_modules.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Voxel time courses</p>
+        <p class="prev-next-title">Modules and scripts</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

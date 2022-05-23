@@ -199,23 +199,138 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+  <a class="reference internal" href="intro_to_4d.html">
+   Working with four dimensional images, masks and functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="otsu_threshold.html">
-   Otsu’s method for binarizing images
+  <a class="reference internal" href="reshape_and_4d.html">
+   Reshaping, 4D to 2D
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_random.html">
-   Random numbers with
+  <a class="reference internal" href="voxels_by_time.html">
+   Voxels and time
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working reproducibly
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_modules.html">
+   Modules and scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sys_path.html">
+   Where does Python look for modules?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assert.html">
+   Using
    <code class="docutils literal notranslate">
     <span class="pre">
-     np.random
+     assert
     </span>
    </code>
+   for testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_manipulation.html">
+   Making and breaking file paths in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Python coding style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstrings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_directories.html">
+   Module directories
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_testing.html">
+   On testing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Detecting activation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="voxel_time_courses.html">
+   Correlating with voxel time courses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_convolution.html">
+   Convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution_background.html">
+   Convolving with the hemodyamic response function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_regression.html">
+   Introducing regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glm_intro.html">
+   Introduction to the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="model_one_voxel.html">
+   Modeling a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_test_example.html">
+   A worked example of the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hypothesis_tests.html">
+   Hypothesis testing with the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="test_one_voxel.html">
+   Testing a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi_multiply.html">
+   Estimation for many voxels at the same time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_tr_onsets.html">
+   Using onsets that do not start on a TR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="whole_image_statistics.html">
+   Whole-brain t tests and p values
   </a>
  </li>
 </ul>
@@ -231,11 +346,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reshape_and_4d.html">
-   Reshaping, 4D to 2D
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="allclose.html">
    Testing for near equality with “allclose”
   </a>
@@ -246,6 +356,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="dot_outer.html">
    Vector and matrix dot products, “np.outer”
   </a>
@@ -253,6 +368,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="newaxis.html">
    Adding length 1 dimensions with newaxis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="array_reductions.html">
+   Array reduction operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_random.html">
+   Random numbers with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     np.random
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -268,28 +398,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="subplots.html">
    Subplots and axes in matplotlib
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Into the fourth dimension
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_to_4d.html">
-   Working with four dimensional images, masks and functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxels_by_time.html">
-   Reshaping 4D images to 2D arrays
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxel_time_courses.html">
-   Voxel time courses
   </a>
  </li>
 </ul>
@@ -368,91 +476,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="anterior_cingulate.html">
    Anterior cingulate
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Statistics and the general linear model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mean_test_example.html">
-   A worked example of the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hypothesis_tests.html">
-   Hypothesis testing with the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="convolution_background.html">
-   Convolving with the hemodyamic response function
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="model_one_voxel.html">
-   Modeling a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="test_one_voxel.html">
-   Testing a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="multi_multiply.html">
-   Estimation for many voxels at the same time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="non_tr_onsets.html">
-   Using onsets that do not start on a TR
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="whole_image_statistics.html">
-   Whole-brain t tests and p values
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Code organization and collaboration
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="on_modules.html">
-   Modules and scripts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="path_manipulation.html">
-   Making and breaking file paths in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sys_path.html">
-   Where does Python look for modules?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assert.html">
-   Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     assert
-    </span>
-   </code>
-   for testing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coding_style.html">
-   Python coding style
   </a>
  </li>
 </ul>
@@ -633,7 +656,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f49743e5c70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fb9400c0040&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_5_1.png" src="_images/arrays_and_images_5_1.png" />
@@ -653,7 +676,7 @@ to show the colormap:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f49742914f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fb939cf5c70&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_7_1.png" src="_images/arrays_and_images_7_1.png" />
@@ -669,7 +692,7 @@ to show the colormap:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f49741ed2e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fb939c50b20&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_9_1.png" src="_images/arrays_and_images_9_1.png" />
@@ -696,7 +719,7 @@ values - in our case between 0 and 99.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f4974113490&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fb939b925b0&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_13_1.png" src="_images/arrays_and_images_13_1.png" />
@@ -759,7 +782,7 @@ the 9th row of the array.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f49740ba250&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb939b1c970&gt;]
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_20_1.png" src="_images/arrays_and_images_20_1.png" />
@@ -776,7 +799,7 @@ the value of the array row at that position.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f496dfd9b80&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb939a85340&gt;]
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_22_1.png" src="_images/arrays_and_images_22_1.png" />
@@ -813,7 +836,7 @@ of flipping the rows and columns (in 2D):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f496df42490&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fb939a62d60&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_25_1.png" src="_images/arrays_and_images_25_1.png" />
@@ -960,7 +983,7 @@ many bins you want with the <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f496dd9fcd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fb939857730&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_38_1.png" src="_images/arrays_and_images_38_1.png" />
@@ -1031,7 +1054,7 @@ binarizing the image at a threshold (of 50 in this case):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f496dd168e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fb9397c8070&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_44_1.png" src="_images/arrays_and_images_44_1.png" />
@@ -1049,7 +1072,7 @@ that we want to the top 4 rows, and the last 5 columns:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f496dcff9d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fb93972e340&gt;
 </pre></div>
 </div>
 <img alt="_images/arrays_and_images_46_1.png" src="_images/arrays_and_images_46_1.png" />

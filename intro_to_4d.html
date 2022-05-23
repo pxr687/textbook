@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Reshaping 4D images to 2D arrays" href="voxels_by_time.html" />
-    <link rel="prev" title="Subplots and axes in matplotlib" href="subplots.html" />
+    <link rel="next" title="Reshaping, 4D to 2D" href="reshape_and_4d.html" />
+    <link rel="prev" title="Boolean indexing with more than one dimension" href="boolean_indexing_nd.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
   Images and code and images
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="what_is_an_image.html">
    What is an image?
@@ -198,24 +198,139 @@ const thebe_selector_output = ".output, .cell_output"
    Boolean indexing with more than one dimension
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy_logical.html">
-   Logical operations on boolean arrays
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Working with four dimensional images, masks and functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="otsu_threshold.html">
-   Otsu’s method for binarizing images
+  <a class="reference internal" href="reshape_and_4d.html">
+   Reshaping, 4D to 2D
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="numpy_random.html">
-   Random numbers with
+  <a class="reference internal" href="voxels_by_time.html">
+   Voxels and time
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working reproducibly
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_modules.html">
+   Modules and scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sys_path.html">
+   Where does Python look for modules?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assert.html">
+   Using
    <code class="docutils literal notranslate">
     <span class="pre">
-     np.random
+     assert
     </span>
    </code>
+   for testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_manipulation.html">
+   Making and breaking file paths in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Python coding style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstrings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_directories.html">
+   Module directories
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_testing.html">
+   On testing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Detecting activation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="voxel_time_courses.html">
+   Correlating with voxel time courses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_convolution.html">
+   Convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution_background.html">
+   Convolving with the hemodyamic response function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="on_regression.html">
+   Introducing regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glm_intro.html">
+   Introduction to the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="model_one_voxel.html">
+   Modeling a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_test_example.html">
+   A worked example of the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hypothesis_tests.html">
+   Hypothesis testing with the general linear model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="test_one_voxel.html">
+   Testing a single voxel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi_multiply.html">
+   Estimation for many voxels at the same time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_tr_onsets.html">
+   Using onsets that do not start on a TR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="whole_image_statistics.html">
+   Whole-brain t tests and p values
   </a>
  </li>
 </ul>
@@ -231,11 +346,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reshape_and_4d.html">
-   Reshaping, 4D to 2D
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="allclose.html">
    Testing for near equality with “allclose”
   </a>
@@ -246,6 +356,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="numpy_logical.html">
+   Logical operations on Boolean arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="dot_outer.html">
    Vector and matrix dot products, “np.outer”
   </a>
@@ -253,6 +368,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="newaxis.html">
    Adding length 1 dimensions with newaxis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="array_reductions.html">
+   Array reduction operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy_random.html">
+   Random numbers with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     np.random
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -268,28 +398,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="subplots.html">
    Subplots and axes in matplotlib
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Into the fourth dimension
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Working with four dimensional images, masks and functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxels_by_time.html">
-   Reshaping 4D images to 2D arrays
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="voxel_time_courses.html">
-   Voxel time courses
   </a>
  </li>
 </ul>
@@ -368,91 +476,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="anterior_cingulate.html">
    Anterior cingulate
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Statistics and the general linear model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mean_test_example.html">
-   A worked example of the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hypothesis_tests.html">
-   Hypothesis testing with the general linear model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="convolution_background.html">
-   Convolving with the hemodyamic response function
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="model_one_voxel.html">
-   Modeling a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="test_one_voxel.html">
-   Testing a single voxel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="multi_multiply.html">
-   Estimation for many voxels at the same time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="non_tr_onsets.html">
-   Using onsets that do not start on a TR
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="whole_image_statistics.html">
-   Whole-brain t tests and p values
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Code organization and collaboration
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="on_modules.html">
-   Modules and scripts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="path_manipulation.html">
-   Making and breaking file paths in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sys_path.html">
-   Where does Python look for modules?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assert.html">
-   Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     assert
-    </span>
-   </code>
-   for testing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coding_style.html">
-   Python coding style
   </a>
  </li>
 </ul>
@@ -584,18 +607,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-voxel-time-course">
+   The voxel time course
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numpy-operations-work-on-the-whole-array-by-default">
    Numpy operations work on the whole array by default
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indexing-with-boolean-arrays">
-   Indexing with Boolean arrays
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#defining-functions">
-   Defining functions
   </a>
  </li>
 </ul>
@@ -634,18 +652,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-voxel-time-course">
+   The voxel time course
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numpy-operations-work-on-the-whole-array-by-default">
    Numpy operations work on the whole array by default
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indexing-with-boolean-arrays">
-   Indexing with Boolean arrays
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#defining-functions">
-   Defining functions
   </a>
  </li>
 </ul>
@@ -792,8 +805,8 @@ short cut for “everything on the previous axes”. For example, these two have
 exactly the same meaning:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_vol</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">first_vol_again</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># Using the ellipsis</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_vol</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># All rows, all columns, all planes, vol 0</span>
+<span class="n">first_vol_again</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># The same thing, using the ellipsis</span>
 </pre></div>
 </div>
 </div>
@@ -801,24 +814,110 @@ exactly the same meaning:</p>
 <p><code class="docutils literal notranslate"><span class="pre">first_vol</span></code> is a 3D image just like the 3D images you have already seen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A slice over the third dimension</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A slice over the third axis (dimension).</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">first_vol</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">14</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fcd774aa4c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f21920afa00&gt;
 </pre></div>
 </div>
 <img alt="_images/intro_to_4d_21_1.png" src="_images/intro_to_4d_21_1.png" />
 </div>
 </div>
 </div>
+<div class="section" id="the-voxel-time-course">
+<h2>The voxel time course<a class="headerlink" href="#the-voxel-time-course" title="Permalink to this headline">¶</a></h2>
+<p>We can think of this 4D data as a series of 3D volumes.  That is the way we
+have been thinking of the 4D data so far:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is slicing over the last (time) axis</span>
+<span class="n">first_vol</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">first_vol</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(64, 64, 30)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also index over the first three axes.  The first three axes in this
+array represent space.</p>
+<ul class="simple">
+<li><p>The first axis goes from right to left (0 index value means right, 63 means
+left);</p></li>
+<li><p>The second axis goes from back to front (0 index value means back, 63 means
+front);</p></li>
+<li><p>The third axes goes from bottom to top (0 means bottom, 29 means top).</p></li>
+</ul>
+<p>If you give me index values for these first three axes, you have given me a
+<em>coordinate</em> in the first three axes of the array.</p>
+<p>For example, you could give me an index tuple for the first three axes like
+this: <code class="docutils literal notranslate"><span class="pre">(42,</span> <span class="pre">32,</span> <span class="pre">19)</span></code>.  The first index of 42 refers to a position towards
+the left of the brain (&gt; 31).  The second index of 32 refers to a position
+almost in the center front to back.  The last index of 19 refers to a position
+a little further towards the top of the brain – in this image.</p>
+<p>This coordinate therefore refers to a particular part of the image:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Where is this in the brain?</span>
+<span class="c1"># Don&#39;t worry about this line, we come to that soon.</span>
+<span class="n">mean_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Make a nice bright dot in the right place</span>
+<span class="n">mean_data</span><span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">mean_data</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">19</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f218ff3f8b0&gt;
+</pre></div>
+</div>
+<img alt="_images/intro_to_4d_25_1.png" src="_images/intro_to_4d_25_1.png" />
+</div>
+</div>
+<p>If we slice into the data array with these coordinates, we will get a vector,
+with the image value at that position (43, 32, 19), for every point in time:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is slicing over all three of the space axes</span>
+<span class="n">voxel_time_course</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">voxel_time_course</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(173,)
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="_images/volumes_and_voxel.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do a plot of these values.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">voxel_time_course</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Volume index&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Signal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Voxel time course&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/intro_to_4d_29_0.png" src="_images/intro_to_4d_29_0.png" />
+</div>
+</div>
+<p>We could call this a “voxel time course”.</p>
+</div>
 <div class="section" id="numpy-operations-work-on-the-whole-array-by-default">
 <h2>Numpy operations work on the whole array by default<a class="headerlink" href="#numpy-operations-work-on-the-whole-array-by-default" title="Permalink to this headline">¶</a></h2>
-<p>Numpy operations like <code class="docutils literal notranslate"><span class="pre">min</span></code>, and <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">std</span></code> operate on the whole numpy
-array by default, ignoring any array shape. For example, here is the maximum
-value for the whole 4D array:</p>
+<p>Numpy operations like <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">min</span></code>, and <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">std</span></code> operate on the
+whole numpy array by default, ignoring any array shape. For example, here is
+the maximum value for the <strong>whole 4D array</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -834,7 +933,7 @@ value for the whole 4D array:</p>
 <p>This is exactly the same as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># maximum when flattening the array to 1 dimension</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Maximum when flattening the array to 1 dimension</span>
 <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -845,131 +944,24 @@ value for the whole 4D array:</p>
 </div>
 </div>
 </div>
-<p>You can ask numpy to operate over particular axes instead of operating over
+<p>You can ask Numpy to operate over particular axes instead of operating over
 the whole array. For example, this will generate a 3D image, where each array
-value is the variance over the 173 values at that 3D position (the variance
-across time):</p>
+value is the mean over the 173 values at the corresponding 3D position (the
+mean across time):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># variance across the final (time) axis</span>
-<span class="n">var_vol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">var_vol</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">14</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mean across the final (time) axis</span>
+<span class="n">mean_vol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Show the middle plane of this mean volume.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_vol</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">14</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fcd753acfd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f218fea05e0&gt;
 </pre></div>
 </div>
-<img alt="_images/intro_to_4d_27_1.png" src="_images/intro_to_4d_27_1.png" />
-</div>
-</div>
-</div>
-<div class="section" id="indexing-with-boolean-arrays">
-<h2>Indexing with Boolean arrays<a class="headerlink" href="#indexing-with-boolean-arrays" title="Permalink to this headline">¶</a></h2>
-<p>See the scipy lectures notes on the <a class="reference external" href="http://scipy-lectures.github.io/intro/numpy/array_object.html">numpy array
-object</a>.</p>
-<p>Let’s say we have an array like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-<span class="n">arr</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 1, 3, 0],
-       [5, 2, 0, 1]])
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can get a True / False (Boolean) array to tell us whether these values are
-above some threshold:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tf_array</span> <span class="o">=</span> <span class="n">arr</span> <span class="o">&gt;</span> <span class="mi">2</span>
-<span class="n">tf_array</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[False, False,  True, False],
-       [ True, False, False, False]])
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can use this Boolean array to <em>index</em> into the original array (or any array
-with a suitable shape). This will select only the elements where the Boolean
-array is <code class="docutils literal notranslate"><span class="pre">True</span></code>. The returned array may well have selected only a few
-members from any particular row or column or (in general) higher axis, so if
-the mask has the same number of dimensions as the array being indexed, the
-returned array is always one-dimensional to reflect the loss of shape:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_elements</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">tf_array</span><span class="p">]</span>
-<span class="n">selected_elements</span>
-<span class="n">selected_elements</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2,)
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can use this to select values in our image as well. For example, if we
-wanted to select only values less than 10 in <code class="docutils literal notranslate"><span class="pre">first_vol</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tf_lt_10</span> <span class="o">=</span> <span class="n">first_vol</span> <span class="o">&lt;</span> <span class="mi">10</span>
-<span class="n">vals_lt_10</span> <span class="o">=</span> <span class="n">first_vol</span><span class="p">[</span><span class="n">tf_lt_10</span><span class="p">]</span>
-<span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">vals_lt_10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 1., 2., 3., 4., 5., 6., 7., 8., 9.])
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="defining-functions">
-<h2>Defining functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">¶</a></h2>
-<p>See Brisk introduction to Python.</p>
-<p>A function takes input arguments, transforms them, and returns the
-output. For example, the following function adds two numbers:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Functions can also return multiple values, for example:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">weather</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;hot&#39;</span><span class="p">,</span> <span class="s1">&#39;north-east&#39;</span><span class="p">,</span> <span class="mi">78</span>
-
-<span class="n">sun</span><span class="p">,</span> <span class="n">wind</span><span class="p">,</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">weather</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sun:&#39;</span><span class="p">,</span> <span class="n">sun</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Window:&#39;</span><span class="p">,</span> <span class="n">wind</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Temperature:&#39;</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sun: hot
-Window: north-east
-Temperature: 78
-</pre></div>
-</div>
+<img alt="_images/intro_to_4d_36_1.png" src="_images/intro_to_4d_36_1.png" />
 </div>
 </div>
 </div>
@@ -1000,17 +992,17 @@ Temperature: 78
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="subplots.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="boolean_indexing_nd.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Subplots and axes in matplotlib</p>
+            <p class="prev-next-title">Boolean indexing with more than one dimension</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="voxels_by_time.html" title="next page">
+    <a class='right-next' id="next-link" href="reshape_and_4d.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Reshaping 4D images to 2D arrays</p>
+        <p class="prev-next-title">Reshaping, 4D to 2D</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
